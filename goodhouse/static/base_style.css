@@ -1,0 +1,66 @@
+body {
+
+	background-color: rgb(35,35,35);
+
+
+
+}
+
+
+.navbar-brand img {
+
+	height:55px;
+	width:500px;
+
+}
+
+.icon-bar {
+
+   background-color:rgb(240,240,240) !important;
+   margin-top:75%;
+
+}
+
+.header-icons {
+
+	color:rgb(240,240,240);
+	font-size: 1.2em;
+
+}
+
+.header-icons:hover {
+
+	color: rgb(200,173,20);
+
+}
+
+
+.header-items {
+
+	margin-top: 6%;
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
