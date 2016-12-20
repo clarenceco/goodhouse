@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='post',
             name='docfile',
-            field=models.FileField(default='NULL.jpg', upload_to='Posts/Year: %Y/Month: %m/Day: %d'),
+            field=models.FileField(default='', upload_to='Posts/Year: %Y/Month: %m/Day: %d'),
         ),
     ]

@@ -4,37 +4,29 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-from .models import Post
-from .forms import DocumentForm
+from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable
 
 
 # Create your views here.
 
-
-def HomePageView(request):
+def HomePage(request):
 	context = {}
 	return render(request, 'base.html', context)
 
+def AboutUs(request):
+	context = {}
+	return render(request, 'about_us.html', context)
 
+def Careers(request):
+	context = {}
+	return render(request, 'careers.html', context)
 
-# def list(request):
-#     # Handle file upload
-#     if request.method == 'POST':
-#         form = DocumentForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             newdoc = Document(docfile = request.FILES['docfile'])
-#             newdoc.save()
+def ContactUs(request):
+	context = {}
+	return render(request, 'contact_us.html', context)
 
-#             # Redirect to the document list after POST
-#             return HttpResponseRedirect(reverse('homepageview'))
-#             #return render(request, 'base.html', {})
-#     else:
-#         form = DocumentForm() # A empty, unbound form
-
-#     # Load documents for the list page
-#     documents = Document.objects.all()
-
-#     # Render list page with the documents and the form
-#     return render(request, 'gh_app/list.html', {'documents': documents, 'form': form})
+def Products(request):
+	context = {}
+	return render(request, 'products.html', context)
 
 

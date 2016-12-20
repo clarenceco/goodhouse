@@ -15,21 +15,21 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='category1_product',
             name='docfile',
-            field=models.FileField(default='NULL.jpg', upload_to='Category1_Products/'),
+            field=models.FileField(default='', upload_to='Category1_Products/'),
         ),
         migrations.AlterField(
             model_name='category2_product',
             name='docfile',
-            field=models.FileField(default='NULL.jpg', upload_to='Category2_Products/'),
+            field=models.FileField(default='', upload_to='Category2_Products/'),
         ),
         migrations.AlterField(
             model_name='category3_product',
             name='docfile',
-            field=models.FileField(default='NULL.jpg', upload_to='Category3_Products/'),
+            field=models.FileField(default='', upload_to='Category3_Products/'),
         ),
         migrations.AlterField(
             model_name='category4_product',
             name='docfile',
-            field=models.FileField(default='NULL.jpg', upload_to='Category4_Products/'),
+            field=models.FileField(default='', upload_to='Category4_Products/'),
         ),
     ]

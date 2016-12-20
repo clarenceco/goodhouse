@@ -1,10 +1,7 @@
 from django.contrib import admin
-from .models import Post, Category1_Product, Category2_Product, Category3_Product, Category4_Product
+from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable
 
 admin.site.register(Post)
-admin.site.register(Category1_Product)
-admin.site.register(Category2_Product)
-admin.site.register(Category3_Product)
-admin.site.register(Category4_Product)
-
+admin.site.register(AirWater_Filter)
+admin.site.register(AirWater_EquipmentConsumable)
 # Register your models here.

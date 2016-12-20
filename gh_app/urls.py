@@ -3,10 +3,9 @@ from gh_app import views
 from views import *
 
 urlpatterns = [
-	url(r'^$',HomePageView, name='homepageview'),
-	#url(r'^list/', views.list, name='list'),
+	url(r'^$', HomePage, name = 'HomePage'),
+	url(r'^aboutus/', AboutUs, name = 'AboutUs'),
+	url(r'^contactus/', ContactUs, name = 'ContactUs'),
+	url(r'^careers/', Careers, name = 'Careers'),
+	url(r'^products/', Products, name = 'Products'),
 ]
-
-# urlpatterns = patterns('gh_app.views',
-#     url(r'^list/$', 'list', name='list'),
-# )
