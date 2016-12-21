@@ -1,3 +1,7 @@
+{% load staticfiles %}
+{% load static %}
+
+
 <!DOCTYPE html>
 
 <html>
@@ -16,7 +20,7 @@
 		
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link href="home_style.css" type="text/css" rel="stylesheet">
+		<link href="{% static 'new_style.css' %}" type="text/css" rel="stylesheet">
 
 
 	
@@ -37,9 +41,9 @@
 				        <span class="icon-bar"></span>
 				        <span class="icon-bar"></span>
 	      			</button>
-	      			<a class="navbar-brand" href=/returnhomeView >
+	      			<a class="navbar-brand" href="/" >
 	      				
-	      				<img src = "logo.png">
+	      				<img src = "{% static 'logo.png' %}">
 
 	      			</a>
 	    		</div>
@@ -49,26 +53,26 @@
 
 			      
 			        	<li class = "header-items">
-			        		<a id="current" class = "header-icons" href="#">What's New?</a>
+			        		<a id="current" class = "header-icons" href="/">What's New?</a>
 			        	</li>
 
 			        	<li class = "header-items">
-			        		<a class = "header-icons" href="#">About</a>
+			        		<a class = "header-icons" href="/aboutus">About</a>
 			        	</li>
 
 
 			        	<li class = "header-items" class="dropdown">
-			            	<a class = "header-icons" href="#">Products</a>
+			            	<a class = "header-icons" href="/products">Products</a>
 			        	</li>
 
 
 			        	<li class = "header-items" class="dropdown">
-			            	<a class = "header-icons" href="#">Careers</a>
+			            	<a class = "header-icons" href="/careers">Careers</a>
 			        	</li>
 
 
 			        	<li class = "header-items">
-			        		<a class = "header-icons" href="#">Contact</a>
+			        		<a class = "header-icons" href="/contactus">Contact</a>
 			        	</li>
 
 
@@ -93,7 +97,7 @@
 				<div class="item active">
 					<div class="carousel-content" align="middle">
 						<h2>Elementum Enim Ultrices</h2>
-						<img src="1.jpg">
+						<img src="{% static '1.jpg' %}">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis leo ut nisi molestie, non elementum enim ultrices. Phasellus ipsum dolor, viverra in eleifend eget, laoreet nec lectus. Quisque elementum elementum vehicula. Donec vel nibh vel leo aliquet faucibus id a felis. Aliquam efficitur arcu turpis, eget hendrerit sem fringilla sit amet. Proin leo diam, eleifend in nisi et, scelerisque hendrerit nunc. Fusce fermentum sapien eu sapien condimentum, eget maximus neque feugiat.</p>
 
 			      	</div>
@@ -102,7 +106,7 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
 				    	<h2>Congue At Libero</h2>
-				    	<img src="2.jpg">
+				    	<img src="{% static '2.jpg' %}">
 						<p>Donec scelerisque varius gravida. Mauris vel ante maximus, vehicula quam vel, tincidunt libero. Ut porttitor laoreet auctor. Mauris vitae ligula id dolor hendrerit consectetur. Pellentesque ac lacus vitae libero aliquam porttitor congue at libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ultricies nibh ut faucibus sagittis. Maecenas malesuada risus et ex efficitur gravida. Integer tincidunt tortor in massa vehicula lobortis.</p>
 
 				    </div>
@@ -111,7 +115,7 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
 				    	<h2>Phasellus eu Rhoncus Arcu</h2>
-				    	<!--<img src="3.jpg">-->			    	
+				    	<!--<img src="{% static '3.jpg' %}">-->			    	
 						<p>Donec eget lacus purus. Proin ac egestas urna. Integer condimentum sem faucibus tincidunt pretium. In sed molestie velit. Integer interdum vitae risus sit amet ornare. Donec et bibendum neque. Suspendisse potenti. Fusce sodales sed ipsum at faucibus. Donec at leo turpis. Vestibulum imperdiet finibus dolor, id efficitur arcu ornare nec. Vivamus blandit, massa sed dapibus efficitur, neque turpis ullamcorper nibh, at mattis enim dolor in mauris. Phasellus eu rhoncus arcu. Maecenas eget imperdiet enim, vitae malesuada nulla. Morbi accumsan odio eu enim rhoncus, nec porttitor tortor rhoncus. Aenean eget purus risus.</p>
 
 				    </div>
@@ -120,7 +124,7 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
 				    	<h2>Facilisis a Enim Vitae</h2>
-				    	<img src="4.jpg">
+				    	<img src="{% static '4.jpg' %}">
 						<p>Nam egestas est sed magna ullamcorper pulvinar. Cras ac porta risus. Mauris in ullamcorper augue. In sapien ligula, sollicitudin quis sapien at, finibus molestie mauris. Aenean est turpis, pulvinar ac nisl non, imperdiet congue leo. Cras tincidunt enim ac tempor aliquet. Quisque sed purus malesuada nulla laoreet ultricies sit amet et dolor. Vestibulum finibus in eros a varius. Curabitur nec metus magna. Integer ultricies mauris nec bibendum gravida. Ut sed congue mauris. Aenean convallis lobortis leo, non semper nisl rhoncus in. Nunc augue justo, facilisis a enim vitae, pulvinar lacinia nibh.</p>
 
 				    </div>

@@ -11,7 +11,7 @@ from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable
 
 def HomePage(request):
 	context = {}
-	return render(request, 'base.html', context)
+	return render(request, 'new.html', context)
 
 def AboutUs(request):
 	context = {}
