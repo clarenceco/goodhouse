@@ -1,0 +1,103 @@
+body {
+	background-color: rgb(20,20,20);
+}
+
+.navbar{
+
+	background-color: black;
+
+}
+.navbar-brand img {
+	height:55px;
+	width:520px;
+}
+
+.icon-bar {
+   background-color:white;
+   margin-top:75%;
+}
+
+.header-icons {
+	color:rgb(240,240,240);
+	font-size: 1.2em;
+
+}
+
+.header-icons:hover {
+	color: rgb(230,180,90);
+
+}
+
+#current{
+
+	background-color:rgb(230,180,90);
+	color:white;
+
+}
+
+.header-items {
+	margin-top: 6%;
+}
+
+.carousel-content h2{
+	color:rgb(230,180,90);
+	font-family:"Fira Sans";
+	text-align:center;
+}
+.carousel-content img{
+	width:65%;
+	max-height:40%;
+	margin-top:10px;
+	margin-bottom:25px;
+	border-radius: 15px;
+}
+
+.carousel-content p{
+	color:white;
+	font-family:Helvetica;
+	text-align:justify;
+	margin-bottom:70px;
+	margin-left:50px;
+	margin-right:50px;
+}
+
+.carousel-indicators li{
+	background-color: rgb(230,180,90);
+}
+
+#myCarousel{
+	width:70%;
+	height:100%;
+	margin: 0 auto;
+	background-color: black;
+
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+}
+
+.glyphicon{
+
+	color:rgb(230,180,90);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
