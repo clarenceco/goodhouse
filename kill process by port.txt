@@ -1,0 +1,2 @@
+netstat -plten | grep <portnumber>
+kill -9 <processnumber>

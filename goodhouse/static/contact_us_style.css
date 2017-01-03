@@ -1,0 +1,103 @@
+body {
+	background-color: rgb(20,20,20);
+}
+
+.navbar{
+	background-color: black;
+}
+.navbar-brand img {
+	height:55px;
+	width:520px;
+}
+
+.icon-bar {
+   background-color:white;
+   margin-top:75%;
+}
+
+.header-icons {
+	color:rgb(240,240,240);
+	font-size: 1.2em;
+}
+
+.header-icons:hover {
+	color: rgb(230,180,90);
+}
+#current{
+	background-color:rgb(230,180,90);
+	color:white;
+}
+.header-items {
+	margin-top: 6%;
+}
+
+
+.contact-box{
+	margin-top:25px;
+	margin-left:50px;
+	margin-right:50px;
+	margin-bottom: 50px;
+}
+.contact{
+	background-color:black;
+	padding:30px;
+	text-align: center;
+	border-radius:15px;
+
+}
+.contact h1{
+	font-family:"Fira Sans";
+	color: rgb(230,180,90);
+}
+.contact p{
+	font-family:helvetica;
+	color:white;
+}
+.contact h4{
+	padding-top:10px;
+	font-family:helvetica;
+	color:white;
+}
+.contact-field{
+	width:300px;
+	height:30px;
+	background-color:rgb(25,25,25);
+	color:white;
+	border-style:double;
+	border-radius:10px;
+}
+.message-field{
+	width:500px;
+	height:150px;
+	background-color:rgb(25,25,25);
+	color:white;
+	border-style:double;
+	border-radius:10px;
+}
+
+.button-field {
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:15px;
+	padding-right:15px;
+	border-radius:10px;
+	border-color: black;
+	font-family:helvetica;
+	color:white;
+	background-color:rgb(230,180,90);
+}
+
+.footer{
+	background-color:black;
+	color:white ;
+	font-family:"Fira Sans";
+	right: 0;
+ 	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	position: fixed;
+	text-align:center;
+}
+
+
+

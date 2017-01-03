@@ -1,7 +1,6 @@
 {% load staticfiles %}
 {% load static %}
 
-
 <!DOCTYPE html>
 
 <html>
@@ -14,7 +13,6 @@
 
 		<link href = "https://fonts.googleapis.com/css?family=Fira Sans" type = "text/css" rel = "stylesheet">
 
-
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 		
@@ -22,11 +20,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<link href="{% static 'new_style.css' %}" type="text/css" rel="stylesheet">
 
-
-	
 	</head>
-
-
 
 	<body>
 
@@ -53,7 +47,11 @@
 
 			      
 			        	<li class = "header-items">
-			        		<a id="current" class = "header-icons" href="/">What's New?</a>
+			        		<a id="current" class = "header-icons" href="/new">What's New?</a>
+			        	</li>
+
+			        	<li class = "header-items">
+			        		<a class = "header-icons" href="/archive">Archive</a>
 			        	</li>
 
 			        	<li class = "header-items">
@@ -61,12 +59,12 @@
 			        	</li>
 
 
-			        	<li class = "header-items" class="dropdown">
+			        	<li class = "header-items">
 			            	<a class = "header-icons" href="/products">Products</a>
 			        	</li>
 
 
-			        	<li class = "header-items" class="dropdown">
+			        	<li class = "header-items">
 			            	<a class = "header-icons" href="/careers">Careers</a>
 			        	</li>
 
@@ -83,7 +81,7 @@
 	  		</div>
 		</nav>
 
-		<div id="myCarousel" class="carousel slide" data-ride="carousel" >
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="10000">
 	  <!-- Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -96,36 +94,64 @@
 			<div class="carousel-inner" role="listbox">
 				<div class="item active">
 					<div class="carousel-content" align="middle">
-						<h2>Elementum Enim Ultrices</h2>
-						<img src="{% static '1.jpg' %}">
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis leo ut nisi molestie, non elementum enim ultrices. Phasellus ipsum dolor, viverra in eleifend eget, laoreet nec lectus. Quisque elementum elementum vehicula. Donec vel nibh vel leo aliquet faucibus id a felis. Aliquam efficitur arcu turpis, eget hendrerit sem fringilla sit amet. Proin leo diam, eleifend in nisi et, scelerisque hendrerit nunc. Fusce fermentum sapien eu sapien condimentum, eget maximus neque feugiat.</p>
+						<h2>{{ post1.title }}</h2>
+						{% if post1.video_exists == True %}
+						<video width="560" height="315" autoplay controls>
+								<source src="{{post1.video_file }}" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						{% else %}
+						<img src="/media/{{ post1.image_file }}" onerror="this.style.display='none'">
+						{% endif %}
+						<p>{{ post1.text }}</p>
 
 			      	</div>
 	    		</div>
 
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
-				    	<h2>Congue At Libero</h2>
-				    	<img src="{% static '2.jpg' %}">
-						<p>Donec scelerisque varius gravida. Mauris vel ante maximus, vehicula quam vel, tincidunt libero. Ut porttitor laoreet auctor. Mauris vitae ligula id dolor hendrerit consectetur. Pellentesque ac lacus vitae libero aliquam porttitor congue at libero. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla ultricies nibh ut faucibus sagittis. Maecenas malesuada risus et ex efficitur gravida. Integer tincidunt tortor in massa vehicula lobortis.</p>
+				    	<h2>{{ post2.title }}</h2>
+				    	{% if post2.video_exists == True %}
+				    	<video width="560" height="315" autoplay controls>
+								<source src="{{ post2.video_file }}" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						{% else %}
+				    	<img src="/media/{{ post2.image_file }}" onerror="this.style.display='none'">
+						{% endif %}
+						<p>{{ post2.text }}</p>
 
 				    </div>
 			    </div>
 
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
-				    	<h2>Phasellus eu Rhoncus Arcu</h2>
-				    	<!--<img src="{% static '3.jpg' %}">-->			    	
-						<p>Donec eget lacus purus. Proin ac egestas urna. Integer condimentum sem faucibus tincidunt pretium. In sed molestie velit. Integer interdum vitae risus sit amet ornare. Donec et bibendum neque. Suspendisse potenti. Fusce sodales sed ipsum at faucibus. Donec at leo turpis. Vestibulum imperdiet finibus dolor, id efficitur arcu ornare nec. Vivamus blandit, massa sed dapibus efficitur, neque turpis ullamcorper nibh, at mattis enim dolor in mauris. Phasellus eu rhoncus arcu. Maecenas eget imperdiet enim, vitae malesuada nulla. Morbi accumsan odio eu enim rhoncus, nec porttitor tortor rhoncus. Aenean eget purus risus.</p>
+				    	<h2>{{ post3.title }}</h2>
+				    	{% if post3.video_exists == True %}
+				    	<video width="560" height="315" autoplay controls>
+								<source src="{{ post3.video_file }}" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						{% else %}
+				    	<img src="/media/{{ post3.image_file }}" onerror="this.style.display='none'">			 
+				    	{% endif %}
+						<p>{{ post3.text }}</p>
 
 				    </div>
 			    </div>
 
 			    <div class="item">
-				    <div class="carousel-content" align="middle">
-				    	<h2>Facilisis a Enim Vitae</h2>
-				    	<img src="{% static '4.jpg' %}">
-						<p>Nam egestas est sed magna ullamcorper pulvinar. Cras ac porta risus. Mauris in ullamcorper augue. In sapien ligula, sollicitudin quis sapien at, finibus molestie mauris. Aenean est turpis, pulvinar ac nisl non, imperdiet congue leo. Cras tincidunt enim ac tempor aliquet. Quisque sed purus malesuada nulla laoreet ultricies sit amet et dolor. Vestibulum finibus in eros a varius. Curabitur nec metus magna. Integer ultricies mauris nec bibendum gravida. Ut sed congue mauris. Aenean convallis lobortis leo, non semper nisl rhoncus in. Nunc augue justo, facilisis a enim vitae, pulvinar lacinia nibh.</p>
+				    <div class="carousel-content" align="middle" onerror="this.style.display='none'">
+				    	<h2>{{ post4.title }}</h2>
+				    	{% if post4.video_exists == True %}
+				    	<video width="560" height="315" autoplay controls>
+								<source src="{{ post4.video_file }}" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						{% else %}
+				    	<img src="/media/{{ post4.image_file }}" >
+						{% endif %}
+						<p>{{ post4.text }}</p>
 
 				    </div>
 			    </div>
@@ -142,14 +168,9 @@
 	    	<span class="sr-only">Next</span>
 	  		</a>
 		</div>
-
+		<div class="footer">
+			&copy; 2016 Goodhouse Industries, Incorporated. All rights reserved.
+		</div>
 	</body> 
-
-
-
-
-
-
-
 
 </html>

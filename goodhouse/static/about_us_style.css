@@ -1,0 +1,209 @@
+body {
+	background-color: rgb(20,20,20);
+}
+
+.navbar{
+	background-color: black;
+}
+.navbar-brand img {
+	height:55px;
+	width:520px;
+}
+
+.icon-bar {
+   background-color:white;
+   margin-top:75%;
+}
+
+.header-icons {
+	color:rgb(240,240,240);
+	font-size: 1.2em;
+}
+
+.header-icons:hover {
+	color: rgb(230,180,90);
+}
+#current{
+	background-color:rgb(230,180,90);
+	color:white;
+}
+.header-items {
+	margin-top: 6%;
+}
+.jumbotron{
+	padding:20px;
+	background-color: rgb(20,20,20);
+
+}
+.jumbotron h1{
+	color:rgb(230,180,90);
+	font-family:"Fira Sans";
+}
+.jumbotron p{
+	color:white;
+	font-family: Helvetica;
+}
+
+
+.desc-box{
+	padding-bottom:50px;
+}
+.serv-box{
+	padding-bottom:50px;
+}
+.tech-box{
+	padding-bottom:50px;
+}
+.comm-box{
+	padding-bottom:50px;
+}
+
+
+.desc{
+	background-color:black;
+	border-radius:15px;
+	padding:30px;
+	
+}
+
+.desc h3{
+	font-family:"Fira Sans";
+	color:rgb(230,180,90);
+	text-align:center;
+}
+.desc p{
+	font-family:helvetica;
+	color:white;
+	font-size:1.1em;
+	text-align:center;
+}
+.desc li{
+	color:white;
+	float:left;
+	clear:none;
+}
+
+
+
+
+.first{
+	width: 18.5%;
+	margin-left:8%;
+	margin-top:2%;
+	text-align:center;
+
+	float: left;
+	clear:none;
+
+}
+
+
+.sub-class{
+	width: 18.5%;
+	margin-left:2%;
+	margin-top:2%;
+	text-align:center;
+
+	float: left;
+	clear:none;
+
+
+}
+.last{
+	width: 18.5%;
+	margin-left:2%;
+	margin-top:2%;
+	text-align:center;
+
+	float: left;
+	clear:none;
+
+}
+.first img, .last img, .sub-class img{
+	display: block;
+	margin:0 auto;
+	width:50px;
+	max-height:50px;
+}
+
+
+
+
+
+.serv{
+	background-color:black;
+	border-radius:15px;
+	padding:30px;
+
+}
+
+.serv h3{
+	font-family:"Fira Sans";
+	color:rgb(230,180,90);
+	text-align: center;
+
+}
+.serv p{
+	font-family:helvetica;
+	color:white;
+	font-size:1.1em;
+	text-align: center;
+}
+.serv-item{
+	font-family:helvetica;
+	color:white;
+	text-align: center;
+	border-style:double;
+	border-radius:10px;
+	padding:10px;
+
+}
+
+
+.tech{
+	background-color:black;
+	border-radius:15px;
+	padding:30px;
+
+}
+
+.tech h3{
+	font-family:"Fira Sans";
+	color:rgb(230,180,90);
+	text-align:center;
+}
+.tech li{
+	color:white;
+	font-family:helvetica;
+	font-size:1.1em;
+}
+
+.comm{
+	background-color:black;
+	border-radius:15px;
+	padding:30px;
+}
+.comm h3{
+	font-family:"Fira Sans";
+	color:rgb(230,180,90);
+	text-align:center;
+}
+.comm p{
+	font-family:helvetica;
+	color:white;
+	font-size:1.1em;
+	text-align: center;
+}
+
+
+.footer{
+	background-color:black;
+	color:white ;
+	font-family:"Fira Sans";
+	right: 0;
+ 	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	position: fixed;
+	text-align:center;
+}

@@ -1,0 +1,107 @@
+body {
+	background-color: rgb(20,20,20);
+}
+.navbar{
+	background-color: black;
+}
+.navbar-brand img {
+	height:55px;
+	width:520px;
+}
+.icon-bar {
+   background-color:white;
+   margin-top:75%;
+}
+.header-icons {
+	color:rgb(240,240,240);
+	font-size: 1.2em;
+}
+.header-icons:hover {
+	color: rgb(230,180,90);
+}
+#current{
+	background-color:rgb(230,180,90);
+	color:white;
+}
+.header-items {
+	margin-top: 6%;
+}
+.jumbotron{
+	padding:20px;
+	background-color: rgb(20,20,20);
+}
+.jumbotron h1{
+	color:rgb(230,180,90);
+	font-family:"Fira Sans";
+}
+.jumbotron p{
+	color:white;
+	font-family: Helvetica;
+}
+.product-box{
+	background-color: black;
+	margin-left:30px;
+	margin-right:30px;
+	margin-bottom: 50px;
+	border-radius: 10px;
+}
+.product-content h2{
+	color: rgb(230,180,90);
+	font-family:"Fira Sans";
+	margin-left:20px;
+	padding-top:20px;
+}
+.product-content li{
+	color:white;
+	margin-bottom:10px;
+	font-size:1.1em;
+	font-family:Helvetica;
+}
+.dropdown-menu {
+	padding:30px;
+	background-color:black;
+	border-color: white;
+	border-radius: 15px;
+
+}
+.dropdown-menu img{
+	width:400px;
+	max-height:400px;
+	padding:10px;
+	border-radius:15px;
+}
+.dropdown-menu p{
+	font-family:Helvetica;
+	text-align: justify;
+}
+.product-icons{
+	color:white;
+}
+
+.product-icons:visited{
+	color:white;
+}
+.product-icons:active{
+	color:rgb(230,180,90);
+	text-decoration: none;
+	background-color:white;
+}
+.product-icons:hover{
+	color:rgb(230,180,90);
+	text-decoration: none;
+	background-color:white;
+	padding:5px;
+	border-radius: 10px;
+}
+
+.footer{
+	background-color:black;
+	color:white ;
+	font-family:"Fira Sans";
+	right: 0;
+ 	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	position: fixed;
+	text-align:center;
+}

@@ -20,13 +20,9 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link href="{% static 'contact_us_style.css' %}" type="text/css" rel="stylesheet">
+		<link href="{% static 'archive_style.css' %}" type="text/css" rel="stylesheet">
 
-
-	
 	</head>
-
-
 
 	<body>
 
@@ -57,9 +53,8 @@
 			        	</li>
 
 			        	<li class = "header-items">
-			        		<a class = "header-icons" href="/archive">Archive</a>
+			        		<a id="current" class = "header-icons" href="/archive">Archive</a>
 			        	</li>
-
 
 			        	<li class = "header-items">
 			        		<a class = "header-icons" href="/aboutus">About</a>
@@ -77,10 +72,8 @@
 
 
 			        	<li class = "header-items">
-			        		<a id="current" class = "header-icons" href="/contactus">Contact</a>
+			        		<a class = "header-icons" href="/contactus">Contact</a>
 			        	</li>
-
-
 			        
 
 			    	</ul>
@@ -88,30 +81,46 @@
 	  		</div>
 		</nav>
 
-		<div class="contact-box" data-aos="zoom-in">
-			<div class="contact">
-				<h1>Contact Us</h1>
-				<p>
-					Call us at (02) 838 9521 to 24 to talk to a technical sales representative, type your contact information and
-					product inquiries below, or send it to ghii@ghii.com.ph.  
-				<p>
-				<form>
-					<hr>
-					<h4>Contact (Enter details here)</h4>
-					<textarea class="contact-field" name="Contact-field" ></textarea>
-					<h4>Message</h4>
-					<textarea class="message-field" name="Inquiry"></textarea>
-					<br>
-					<br>
-					<input class="button-field" type="submit" value="Send Inquiry">
-				</form>
+
+		<div class="container">
+			<div class="jumbotron" data-aos="zoom-in">
+				<h1>Archive</h1> 
+				<p>Here lies all of Goodhouse's articles and posts.</p> 
 			</div>
-		</p>
-
-
 		</div>
 
+		<div class="product-box">
+			<div class="product-content">
+				<h2>Posts</h2>
 
+				
+
+				<ul class="product-drop">
+					{% for post in posts %}
+					<li class="dropdown">
+						<a class = "product-icons"href="#" data-toggle="dropdown">
+							{{ post.title}}
+						</a>
+          				<div class="dropdown-menu">
+          					<h3>
+          						{{ post.title}}
+          					</h3>
+          					{% if post.video_exists == True %}
+          					<video width="560" height="315" controls>
+								<source src="vid1.mp4" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+							{% else %}
+							<img src="/media/{{ post.image_file }}" onerror="this.style.display='none'">
+							{% endif %}
+          					<p>{{ post.text }}</p>
+           				</div>
+					</li>
+					{% endfor %}
+				</ul>
+				<br>
+			</div>
+		</div>
 		<!--Animations-->
 		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 		<script>
@@ -123,15 +132,6 @@
 
 		<div class="footer">
 			&copy; 2016 Goodhouse Industries, Incorporated. All rights reserved.
-		</div>
-
-	</body> 
-
-
-
-
-
-
-
+		</div>	</body> 
 
 </html>
