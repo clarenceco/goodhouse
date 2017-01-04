@@ -2,6 +2,9 @@ from __future__ import unicode_literals
 from django.db import models
 from django.utils import timezone
 import datetime
+from django.db import models
+from cloudinary.models import CloudinaryField
+
 
 class Post(models.Model):
 	title = models.CharField(max_length = 100, primary_key = True)
@@ -16,7 +19,7 @@ class Post(models.Model):
 class AirWater_Filter(models.Model):
 	name = models.CharField(max_length = 100, primary_key = True)
 	description = models.TextField()
-	file = models.FileField(upload_to = 'AirWater_Filters/')
+	file = CloudinaryField('image')
 	upload_date = models.DateTimeField(auto_now_add = True)
 	def __str__(self):
 		return self.name

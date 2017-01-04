@@ -1,6 +1,6 @@
 {% load staticfiles %}
 {% load static %}
-
+{% load cloudinary %}
 
 <!DOCTYPE html>
 
@@ -100,8 +100,8 @@
 							{{ filter.name }}
 						</a>
           				<div class="dropdown-menu">
-
-          					<img src="/media/{{ filter.file }}">
+          				{% cloudinary filter.image format="jpg" width=120 height=80 crop="fill" %}
+          					
           				
           					<p>{{ filter.description|linebreaksbr }}</p>
            				
