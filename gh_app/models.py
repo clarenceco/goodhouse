@@ -9,9 +9,9 @@ from cloudinary.models import CloudinaryField
 class Post(models.Model):
 	title = models.CharField(max_length = 100, primary_key = True)
 	text = models.TextField()
-	image_file = models.FileField(upload_to = 'Posts/Year: %Y/Month: %m/Day: %d', default = 'gh.png')
-	video_file = models.FileField(upload_to = 'Posts/Year: %Y/Month: %m/Day: %d', blank = True )
-	video_exists = models.BooleanField()
+	image_file = CloudinaryField('image')
+	video_file = CloudinaryField('video')
+	show_video = models.BooleanField()
 	upload_date = models.DateTimeField(auto_now_add = True)
 	def __str__(self):
 		return self.title

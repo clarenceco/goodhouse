@@ -126,7 +126,7 @@
 							{{ ec.name }}
 						</a>
           				<div class="dropdown-menu">
-          					<img src="/media/{{ ec.file }}">
+          					{% cloudinary ec.file format="jpg" width=300 height=275 %}
           					<p>{{ ec.description }}</p>
            				</div>
 					</li>
