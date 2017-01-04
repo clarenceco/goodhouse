@@ -7,6 +7,15 @@ from django.core.urlresolvers import reverse
 from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable, Career
 
 
+
+
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+
+
+
+
 # Create your views here.
 
 def New(request):
