@@ -96,14 +96,7 @@
 				<div class="item active">
 					<div class="carousel-content" align="middle">
 						<h2>{{ post1.title }}</h2>
-						{% if post1.video_exists == True %}
-						<video width="560" height="315" autoplay controls>
-								<source src="{{post1.video_file }}" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-						{% else %}
-						<img src="/media/{{ post1.image_file }}" onerror="this.style.display='none'">
-						{% endif %}
+						{% cloudinary post1.image_file format="jpg"%}
 						<p>{{ post1.text|linebreaksbr }}</p>
 
 			      	</div>
@@ -112,14 +105,7 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
 				    	<h2>{{ post2.title }}</h2>
-				    	{% if post2.video_exists == True %}
-				    	<video width="560" height="315" autoplay controls>
-								<source src="{{ post2.video_file }}" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-						{% else %}
-				    	<img src="/media/{{ post2.image_file }}" onerror="this.style.display='none'">
-						{% endif %}
+				    	{% cloudinary post2.image_file format="jpg"%}
 						<p>{{ post2.text|linebreaksbr }}</p>
 
 				    </div>
@@ -128,14 +114,7 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
 				    	<h2>{{ post3.title }}</h2>
-				    	{% if post3.video_exists == True %}
-				    	<video width="560" height="315" autoplay controls>
-								<source src="{{ post3.video_file }}" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-						{% else %}
-				    	<img src="/media/{{ post3.image_file }}" onerror="this.style.display='none'">			 
-				    	{% endif %}
+				    	{% cloudinary post3.image_file format="jpg"%}
 						<p>{{ post3.text|linebreaksbr }}</p>
 
 				    </div>
@@ -144,14 +123,7 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle" onerror="this.style.display='none'">
 				    	<h2>{{ post4.title }}</h2>
-				    	{% if post4.video_exists == True %}
-				    	<video width="560" height="315" autoplay controls>
-								<source src="{{ post4.video_file }}" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-						{% else %}
-				    	<img src="/media/{{ post4.image_file }}" >
-						{% endif %}
+				    	{% cloudinary post4.image_file format="jpg"%}
 						<p>{{ post4.text|linebreaksbr }}</p>
 
 				    </div>
