@@ -27,7 +27,7 @@ class AirWater_Filter(models.Model):
 class AirWater_EquipmentConsumable(models.Model):
 	name = models.CharField(max_length = 100, primary_key = True)
 	description = models.TextField()
-	file = models.FileField(upload_to = 'AirWater_EquipmentConsumables/')
+	file = CloudinaryField('image')
 	upload_date = models.DateTimeField(auto_now_add = True)
 	def __str__(self):
 		return self.name
