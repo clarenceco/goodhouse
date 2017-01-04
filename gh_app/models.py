@@ -10,7 +10,7 @@ class Post(models.Model):
 	title = models.CharField(max_length = 100, primary_key = True)
 	text = models.TextField()
 	image_file = CloudinaryField('image')
-	video_file = CloudinaryField(resource_type='video')
+	video_file = CloudinaryField('image')
 	video_exists = models.BooleanField()
 	upload_date = models.DateTimeField(auto_now_add = True)
 	def __unicode__(self):
