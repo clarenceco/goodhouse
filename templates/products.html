@@ -102,7 +102,7 @@
 							{{ filter.name }}
 						</a>
           				<div class="dropdown-menu">
-          					{% cloudinary filter.file format="jpg" width=120 height=80 crop="fill" %}
+          					{% cloudinary filter.file format="jpg" width=400 height=400 crop="fill" %}
           					<p>{{ filter.description|linebreaksbr }}</p>
            				
            				</div>
