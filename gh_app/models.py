@@ -19,7 +19,7 @@ class Post(models.Model):
 class AirWater_Filter(models.Model):
 	name = models.CharField(max_length = 100, primary_key = True)
 	description = models.TextField()
-	
+	file = CloudinaryField('image')
 	upload_date = models.DateTimeField(auto_now_add = True)
 	def __str__(self):
 		return self.name
