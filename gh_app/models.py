@@ -11,7 +11,7 @@ class Post(models.Model):
 	text = models.TextField()
 	image_file = CloudinaryField('image')
 	video_file = CloudinaryField('video')
-	show_video = models.BooleanField()
+	video_exists = models.BooleanField()
 	upload_date = models.DateTimeField(auto_now_add = True)
 	def __str__(self):
 		return self.title
