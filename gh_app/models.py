@@ -13,7 +13,7 @@ class Post(models.Model):
 	video_file = CloudinaryField(resource_type='video')
 	video_exists = models.BooleanField()
 	upload_date = models.DateTimeField(auto_now_add = True)
-	def __str__(self):
+	def __unicode__(self):
 		return self.title
 
 class AirWater_Filter(models.Model):
