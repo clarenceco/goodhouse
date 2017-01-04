@@ -61,6 +61,8 @@ body {
 	padding:30px;
 	background-color:black;
 	position:relative;
+	border-color: white;
+	border-radius: 15px;
 }
 
 .product-drop{
