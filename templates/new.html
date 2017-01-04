@@ -104,7 +104,7 @@
 						{% else %}
 						<img src="/media/{{ post1.image_file }}" onerror="this.style.display='none'">
 						{% endif %}
-						<p>{{ post1.text }}</p>
+						<p>{{ post1.text|linebreaksbr }}</p>
 
 			      	</div>
 	    		</div>
@@ -120,7 +120,7 @@
 						{% else %}
 				    	<img src="/media/{{ post2.image_file }}" onerror="this.style.display='none'">
 						{% endif %}
-						<p>{{ post2.text }}</p>
+						<p>{{ post2.text|linebreaksbr }}</p>
 
 				    </div>
 			    </div>
@@ -136,7 +136,7 @@
 						{% else %}
 				    	<img src="/media/{{ post3.image_file }}" onerror="this.style.display='none'">			 
 				    	{% endif %}
-						<p>{{ post3.text }}</p>
+						<p>{{ post3.text|linebreaksbr }}</p>
 
 				    </div>
 			    </div>
@@ -152,7 +152,7 @@
 						{% else %}
 				    	<img src="/media/{{ post4.image_file }}" >
 						{% endif %}
-						<p>{{ post4.text }}</p>
+						<p>{{ post4.text|linebreaksbr }}</p>
 
 				    </div>
 			    </div>

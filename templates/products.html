@@ -1,6 +1,4 @@
 {% load cloudinary %}
-
-
 {% load staticfiles %}
 {% load static %}
 
@@ -127,7 +125,7 @@
 						</a>
           				<div class="dropdown-menu">
           					{% cloudinary ec.file format="jpg" width=300 height=275 %}
-          					<p>{{ ec.description }}</p>
+          					<p>{{ ec.description|linebreaksbr }}</p>
            				</div>
 					</li>
 					{% endfor %}

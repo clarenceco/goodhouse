@@ -106,15 +106,8 @@
           					<h3>
           						{{ post.title}}
           					</h3>
-          					{% if post.video_exists == True %}
-          					<video width="560" height="315" controls>
-								<source src="vid1.mp4" type="video/mp4">
-								Your browser does not support the video tag.
-							</video>
-							{% else %}
-							<img src="/media/{{ post.image_file }}" onerror="this.style.display='none'">
-							{% endif %}
-          					<p>{{ post.text }}</p>
+							{% cloudinary post.image_file format="jpg"%}
+          					<p>{{ post.text|linebreaksbr }}</p>
            				</div>
 					</li>
 					{% endfor %}
