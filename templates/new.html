@@ -98,14 +98,12 @@
 				<div class="item active">
 					<div class="carousel-content" align="middle">
 						<h2>{{ post1.title }}</h2>
-						{% if post1.video_exists == True %}
+							{% if post1.video_exists == True %}
           					<iframe width="560" height="315" src="{{ post1.video_URL }}?rel=0&autoplay=1" frameborder="0" allowfullscreen> </iframe>
           					{% else %}
           						{% if post1.image_exists == True %}
 									{% cloudinary post1.image_file format="jpg" %}
-								{% else %}
-									<img src = "{% static 'slice1.png' %}">
-          						{% endif %}
+								{% endif %}
 							{% endif %}
 						<p>{{ post1.text|linebreaksbr }}</p>
 			      	</div>
@@ -114,13 +112,11 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
 				    	<h2>{{ post2.title }}</h2>
-				    	{% if post2.video_exists == True %}
+				    		{% if post2.video_exists == True %}
           					<iframe width="560" height="315" src="{{ post2.video_URL }}?rel=0&autoplay=1" frameborder="0" allowfullscreen> </iframe>
           					{% else %}
           						{% if post2.image_exists == True %}
 									{% cloudinary post2.image_file format="jpg" %}
-								{% else %}
-									<img src = "{% static 'slice1.png' %}">
           						{% endif %}
 							{% endif %}
 						<p>{{ post2.text|linebreaksbr }}</p>
@@ -131,14 +127,12 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
 				    	<h2>{{ post3.title }}</h2>
-				    	{% if post3.video_exists == True %}
+				    		{% if post3.video_exists == True %}
           					<iframe width="560" height="315" src="{{ post3.video_URL }}?rel=0&autoplay=1" frameborder="0" allowfullscreen> </iframe>
           					{% else %}
           						{% if post3.image_exists == True %}
 									{% cloudinary post3.image_file format="jpg" %}
-								{% else %}
-									<img src = "{% static 'slice1.png' %}">
-          						{% endif %}
+								{% endif %}
 							{% endif %}
 						<p>{{ post3.text|linebreaksbr }}</p>
 
@@ -148,14 +142,12 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle" onerror="this.style.display='none'">
 				    	<h2>{{ post4.title }}</h2>
-				    	{% if post4.video_exists == True %}
+				    		{% if post4.video_exists == True %}
           					<iframe width="560" height="315" src="{{ post4.video_URL }}?rel=0&autoplay=1" frameborder="0" allowfullscreen> </iframe>
           					{% else %}
           						{% if post4.image_exists == True %}
 									{% cloudinary post4.image_file format="jpg" %}
-								{% else %}
-									<img src = "{% static 'slice1.png' %}">
-          						{% endif %}
+								{% endif %}
 							{% endif %}
 						<p>{{ post4.text|linebreaksbr }}</p>
 

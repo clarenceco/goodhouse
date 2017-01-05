@@ -113,9 +113,7 @@
           					{% else %}
           						{% if post.image_exists == True %}
 									{% cloudinary post.image_file format="jpg" %}
-								{% else %}
-									<img src = "{% static 'slice1.png' %}">
-          						{% endif %}
+								{% endif %}
 							{% endif %}
           					<p>{{ post.text|linebreaksbr }}</p>
            				</div>
