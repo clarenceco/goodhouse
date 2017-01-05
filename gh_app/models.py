@@ -9,7 +9,7 @@ from cloudinary.models import CloudinaryField
 class Post(models.Model):
 	title = models.CharField(max_length = 100, primary_key = True)
 	text = models.TextField()
-	image_file = CloudinaryField('image', blank=True)
+	image_file = CloudinaryField('image', blank=True, null=True)
 	video_URL = models.CharField(max_length = 200, blank=True)
 	image_exists = models.BooleanField()
 	video_exists = models.BooleanField()
