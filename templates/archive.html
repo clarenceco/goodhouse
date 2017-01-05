@@ -106,7 +106,18 @@
           					<h3>
           						{{ post.title}}
           					</h3>
-							{% cloudinary post.image_file format="jpg"%}
+          					{% if post.video_exists == True %}
+          					<video width="560" height="315" autoplay controls>
+							<source src="{{ post.video_URL }}" type="video/mp4">
+							Your browser does not support the video tag.
+							</video>
+          					{% else %}
+          						{% if post.image_exists == True %}
+									{% cloudinary post.image_file format="jpg" %}
+								{% else %}
+									<img src = "{% static 'gh.png' %}">
+          						{% endif %}
+							{% endif %}
           					<p>{{ post.text|linebreaksbr }}</p>
            				</div>
 					</li>
