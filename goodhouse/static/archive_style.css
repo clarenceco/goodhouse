@@ -106,4 +106,5 @@ body {
 	padding: 1rem;
 	position: fixed;
 	text-align:center;
+	z-index: 99 !important;
 }
