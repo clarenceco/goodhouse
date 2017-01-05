@@ -40,4 +40,3 @@ def ContactUs(request):
 	context = {}
 	return render(request, 'contact_us.html', context)
 
-
