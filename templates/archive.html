@@ -107,10 +107,7 @@
           						{{ post.title}}
           					</h3>
           					{% if post.video_exists == True %}
-          					<video width="560" height="315" autoplay controls>
-							<source src="{{ post.video_URL }}" type="video/mp4">
-							Your browser does not support the video tag.
-							</video>
+          					<iframe width="560" height="315" src="{{ post.video_URL }}" frameborder="0" allowfullscreen> </iframe>
           					{% else %}
           						{% if post.image_exists == True %}
 									{% cloudinary post.image_file format="jpg" %}
