@@ -96,7 +96,18 @@
 				<div class="item active">
 					<div class="carousel-content" align="middle">
 						<h2>{{ post1.title }}</h2>
-						{% cloudinary post1.image_file format="jpg"%}
+						{% if post1.video_exists == True %}
+          					<video width="560" height="315" autoplay controls>
+							<source src="{{ post1.video_URL }}" type="video/mp4">
+							Your browser does not support the video tag.
+							</video>
+          					{% else %}
+          						{% if post1.image_exists == True %}
+									{% cloudinary post1.image_file format="jpg" %}
+								{% else %}
+									<img src = "{% static 'gh.png' %}">
+          						{% endif %}
+							{% endif %}
 						<p>{{ post1.text|linebreaksbr }}</p>
 
 			      	</div>
@@ -105,7 +116,18 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
 				    	<h2>{{ post2.title }}</h2>
-				    	{% cloudinary post2.image_file format="jpg"%}
+				    	{% if post2.video_exists == True %}
+          					<video width="560" height="315" autoplay controls>
+							<source src="{{ post2.video_URL }}" type="video/mp4">
+							Your browser does not support the video tag.
+							</video>
+          					{% else %}
+          						{% if post2.image_exists == True %}
+									{% cloudinary post2.image_file format="jpg" %}
+								{% else %}
+									<img src = "{% static 'gh.png' %}">
+          						{% endif %}
+							{% endif %}
 						<p>{{ post2.text|linebreaksbr }}</p>
 
 				    </div>
@@ -114,7 +136,18 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle">
 				    	<h2>{{ post3.title }}</h2>
-				    	{% cloudinary post3.image_file format="jpg"%}
+				    	{% if post3.video_exists == True %}
+          					<video width="560" height="315" autoplay controls>
+							<source src="{{ post3.video_URL }}" type="video/mp4">
+							Your browser does not support the video tag.
+							</video>
+          					{% else %}
+          						{% if post3.image_exists == True %}
+									{% cloudinary post3.image_file format="jpg" %}
+								{% else %}
+									<img src = "{% static 'gh.png' %}">
+          						{% endif %}
+							{% endif %}
 						<p>{{ post3.text|linebreaksbr }}</p>
 
 				    </div>
@@ -123,7 +156,18 @@
 			    <div class="item">
 				    <div class="carousel-content" align="middle" onerror="this.style.display='none'">
 				    	<h2>{{ post4.title }}</h2>
-				    	{% cloudinary post4.image_file format="jpg"%}
+				    	{% if post4.video_exists == True %}
+          					<video width="560" height="315" autoplay controls>
+							<source src="{{ post4.video_URL }}" type="video/mp4">
+							Your browser does not support the video tag.
+							</video>
+          					{% else %}
+          						{% if post4.image_exists == True %}
+									{% cloudinary post4.image_file format="jpg" %}
+								{% else %}
+									<img src = "{% static 'gh.png' %}">
+          						{% endif %}
+							{% endif %}
 						<p>{{ post4.text|linebreaksbr }}</p>
 
 				    </div>
