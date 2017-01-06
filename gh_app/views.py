@@ -44,6 +44,7 @@ def ContactUs(request):
 
 
 def Send(request):
+	context = {}
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
 		if form.is_valid():
@@ -52,11 +53,11 @@ def Send(request):
 			fullemail = "Contact: " + contact + "/nContent:" + content
 			try:
 				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['goodhousetestacc@gmail.com'], fail_silently=False)
-				return redirect('/contactus')
+				return render(request, 'contact_us.html', context)
 			except:
-				return redirect("/products")
+				return render(request, 'products.html', context)
 		else:
-			return redirect('/products')
+			return render(request, 'contact_us.html', context)
 	else:
-		return redirect('/products')
+		return render(request, 'contact_us.html', context)
 
