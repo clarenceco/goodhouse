@@ -96,6 +96,7 @@
 					product inquiries below, or send it to ghii@ghii.com.ph.  
 				<p>
 				<form action="/send" method="post" enctype="text/plain">
+					{% csrf_token %}
 					<hr>
 					<h4>Contact (Enter details here)</h4>
 					<textarea class="contact-field" name="contact" ></textarea>
