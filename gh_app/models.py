@@ -1,10 +1,9 @@
 from __future__ import unicode_literals
 from django.db import models
-from django.utils import timezone
-import datetime
-from django.db import models
 from django import forms
 from cloudinary.models import CloudinaryField
+from django.utils import timezone
+import datetime
 
 
 class Post(models.Model):
@@ -41,3 +40,6 @@ class Career(models.Model):
 	def __str__(self):
 		return self.title
 
+class ContactForm(forms.Form):
+    contact = forms.CharField(required=True)
+    content = forms.CharField(required=True)

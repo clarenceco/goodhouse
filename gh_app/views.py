@@ -4,9 +4,11 @@ from django.shortcuts import render
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
+from django.conf import settings
+from django.core.mail import send_mail, BadHeaderError
 
 
-from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable, Career
+from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable, Career, ContactForm
 
 # Create your views here.
 
@@ -39,4 +41,19 @@ def Careers(request):
 def ContactUs(request):
 	context = {}
 	return render(request, 'contact_us.html', context)
+
+
+def Send(request):
+	if request.method == 'POST':
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			contact = form.cleaned_data['contact']
+			content = form.cleaned_data['content']
+			fullemail = "Contact: " + contact + "/nContent:" + content
+			send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['goodhousetestacc@gmail.com'], fail_silently=False)
+			return redirect('/contactus')
+		else:
+			return redirect('/contactus')
+	else:
+		return redirect('/contactus')
 
