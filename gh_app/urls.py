@@ -10,4 +10,5 @@ urlpatterns = [
 	url(r'^products/', Products, name = 'Products'),
 	url(r'^careers/', Careers, name = 'Careers'),
 	url(r'^contactus/', ContactUs, name = 'ContactUs'),
+	url(r'^send/', Send, name = 'Send')
 ]
