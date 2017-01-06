@@ -50,10 +50,13 @@ def Send(request):
 			contact = form.cleaned_data['contact']
 			content = form.cleaned_data['content']
 			fullemail = "Contact: " + contact + "/nContent:" + content
-			send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['goodhousetestacc@gmail.com'], fail_silently=False)
-			return redirect('/contactus')
+			try:
+				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['goodhousetestacc@gmail.com'], fail_silently=False)
+				return redirect('/contactus')
+			except:
+				return redirect("/products")
 		else:
-			return redirect('/contactus')
+			return redirect('/products')
 	else:
-		return redirect('/contactus')
+		return redirect('/products')
 
