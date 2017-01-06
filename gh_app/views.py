@@ -50,7 +50,7 @@ def Send(request):
 		if form.is_valid():
 			contact = form.cleaned_data['contact']
 			content = form.cleaned_data['content']
-			fullemail = "Contact: " + contact + "/nContent:" + content
+			fullemail = "Contact: " + contact + ". Content:" + content
 			try:
 				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['goodhousetestacc@gmail.com'], fail_silently=False)
 				return render(request, 'contact_us.html', context)
