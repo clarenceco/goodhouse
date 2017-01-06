@@ -55,7 +55,7 @@ def Send(request):
 				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['goodhousetestacc@gmail.com'], fail_silently=False)
 				return render(request, 'contact_us.html', context)
 			except:
-				return render(request, 'products.html', context)
+				return render(request, 'contact_us.html', context)
 		else:
 			return render(request, 'contact_us.html', context)
 	else:
