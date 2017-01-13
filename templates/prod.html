@@ -1,6 +1,6 @@
-{% load cloudinary %}
 {% load staticfiles %}
 {% load static %}
+
 
 <!DOCTYPE html>
 
@@ -20,11 +20,13 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link href="{% static 'products_style.css' %}" type="text/css" rel="stylesheet">
+		<link href="{% static 'prod_style.css' %}" type="text/css" rel="stylesheet">
 
 		<link rel="shortcut icon" type="image/png" href="{% static 'gh.png' %}"/>
-
+	
 	</head>
+
+
 
 	<body>
 
@@ -62,19 +64,22 @@
 			        		<a class = "header-icons" href="/aboutus">About</a>
 			        	</li>
 
+
 			        	<li class = "header-items">
-			            	<a id="current" class = "header-icons" href="/products">Products</a>
+			            	<a class = "header-icons" href="/products">Products</a>
 			        	</li>
 
 
 			        	<li class = "header-items">
-			            	<a class = "header-icons" href="/careers">Careers</a>
+			            	<a id="current" class = "header-icons" href="/careers">Careers</a>
 			        	</li>
 
 
 			        	<li class = "header-items">
 			        		<a class = "header-icons" href="/contactus">Contact</a>
 			        	</li>
+
+
 			        
 
 			    	</ul>
@@ -83,65 +88,10 @@
 		</nav>
 
 
+
 		<div class="container">
-			<div class="jumbotron" data-aos="zoom-in">
-				<h1>Our Products</h1> 
-				<p>We offer a broad range of products and equipment for HVAC, cleanroom and water treatment applications.</p> 
-			</div>
-		</div>
 
-		<div class="box">
-			<div class="container-1">
-		  		<form>
-		    		<input type="search" id="search" placeholder="Search..." />
-		  		</form>
-			</div>
-		</div>
 
-		<div class="product-box1">
-			<div class="product-content">
-				<h2>Air and Water Filters</h2>
-				<hr>
-
-				<ul class="product-drop">
-					{% for filter in filters %}
-					<li class="dropdown">
-						<a class = "product-icons"href="#" data-toggle="dropdown">
-							{{ filter.name }}
-						</a>
-          				<div class="dropdown-menu">
-          					{% cloudinary filter.file format="jpg" width=300 height=275 %}
-          					<p>{{ filter.description|linebreaksbr }}</p>
-           				
-           				</div>
-					</li>
-					{% endfor %}
-				</ul>
-
-				<br>
-			</div>
-		</div>
-
-		<div class="product-box2">
-			<div class="product-content">
-				<h2>Air and Water Equipment and Consumables</h2>
-				<hr>
-
-				<ul class="product-drop">
-					{% for ec in equipment_consumables %}
-					<li class="dropdown">
-						<a class = "product-icons"href="#" data-toggle="dropdown">
-							{{ ec.name }}
-						</a>
-          				<div class="dropdown-menu">
-          					{% cloudinary ec.file format="jpg" width=300 height=275 %}
-          					<p>{{ ec.description|linebreaksbr }}</p>
-           				</div>
-					</li>
-					{% endfor %}
-				</ul>
-				<br>
-			</div>
 		</div>
 		<!--Animations-->
 		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
@@ -156,5 +106,12 @@
 		</div>
 
 	</body> 
+
+
+
+
+
+
+
 
 </html>

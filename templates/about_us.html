@@ -92,42 +92,109 @@
 		<div class="about container">
 			<div class="jumbotron" data-aos="zoom-in">
 				<h1>About Us</h1> 
-				<p>Goodhouse Industries, Inc. (GHII), established in 1992, is a Filipino company that specializes in the design and manufacture of standard and custom industrial air and water filters, cleanroom systems, dust collectors, HVAC equipment and components for a wide range of applications.</p> 
+				<p>Goodhouse Industries, Inc. (GHII), established in 1992, is a Filipino company that specializes in the design and manufacture of standard and custom industrial air filters, cleanroom systems, dust collectors, HVAC equipment and components for a wide range of applications.</p> 
 			</div>
 		</div>
 
 
 
+
+
+
+
+
+
+
+
+
 		<div class="desc-box" data-aos="fade-down">
 			<div class="desc container">
-				<h3>Who We Serve</h3>
-				<p>Goodhouse Industries, Inc. (GHII), established in 1992, is a Filipino company that specializes in the design and manufacture of standard and custom industrial air and water filters, cleanroom systems, dust collectors, HVAC equipment and components for a wide range of applications.</p> 
+				<h2>Who We Serve</h2>
+				<p>GHII offers a broad range of clean room and HVAC components and services to help maintain a controlled production environment for manufacturing plants</p> 
 
 				<ul style="list-style: none;">
 					<div class="first">
-						<img src="{% static 'slice1.png' %}"><br>
-						<li>Food and Beverage and Pharmaceutical Industry</li>
+						<img src="{% static 'gh.png' %}"><br>
+						<li> &nbsp&nbsp Food and Beverage </li>
 					</div>
 					<div class="sub-class">
-						<img src="{% static 'slice1.png' %}"><br>
+						<img src="{% static 'gh.png' %}"><br>
+						<li>Pharmaceutical Industry</li>
+					</div>					
+					<div class="sub-class">
+						<img src="{% static 'gh.png' %}"><br>
 						<li>Semiconductor and Electronics</li>
 					</div>
 					<div class="sub-class">
-						<img src="{% static 'slice1.png' %}"><br>
-						<li>Automotive Assembly and Paint Booths</li>
+						<img src="{% static 'gh.png' %}"><br>
+						<li>Paint Booth for Automotive Assembly Plant</li>
 					</div>
 					<div class="last">
-						<img src="{% static 'slice1.png' %}"><br>
-						<li>Flour and Feed Mills and Other Manufacturing Industries</li>
+						<img src="{% static 'gh.png' %}"><br>
+						<li>Cement, Flour and Feed Mills and other dust generating plants</li>
 					</div>
 
 				</ul>
 			</div>
 		</div>
 
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="3000" data-aos="fade-down">
+			<h2>Featured Products</h2>
+	  <!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			</ol>
+
+	  <!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<div class="carousel-content" align="middle">
+						<h3>Product Name 1</h3>
+						<img src="{% static 'carbon_filters.jpg' %}">
+			      	</div>
+	    		</div>
+
+			    <div class="item">
+				    <div class="carousel-content" align="middle">
+						<h3>Product Name 2</h3>
+						<img src="{% static 'oven_filters.jpg' %}">
+				    </div>
+			    </div>
+
+			    <div class="item">
+				    <div class="carousel-content" align="middle">
+						<h3>Product Name 3</h3>
+						<img src="{% static 'ceiling_filters.jpg' %}">
+				    </div>
+			    </div>
+
+			    <div class="item">
+				    <div class="carousel-content" align="middle" onerror="this.style.display='none'">
+						<h3>Product Name 4</h3>
+						<img src="{% static 'fcb.jpg' %}">
+				    </div>
+			    </div>
+
+			</div>
+
+	  <!-- Left and right controls -->
+			<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+		    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+		    	<span class="sr-only">Previous</span>
+	  		</a>
+		  		<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+		    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	    	<span class="sr-only">Next</span>
+	  		</a>
+		</div>
+
+		<!--
 		<div class="serv-box" data-aos="fade-down">
 			<div class="serv container">
-				<h3>Our Services</h3>
+				<h2>Our Services</h2>
 				<p>We offer cleanroom validation and air quality measurement tests at a reasonable cost.</p> 
 
 					<p class="serv-item">Particle Count</p>
@@ -139,11 +206,11 @@
 				
 			</div>
 		</div>
-		
+		-->
 
 		<div class="tech-box" data-aos="fade-down">
 			<div class="tech container">
-				<h3>Our Technical Advantage</h3>
+				<h2>Our Technical Advantage</h2>
 				<ul>
 					<li>Offers all-around solution from assessment, recommendation, design, installation, testing and after sales technical support.</li>
 					<li>Expert recommendations with more than 20 years of experience in the industry.</li>
@@ -157,7 +224,7 @@
 
 		<div class="comm-box" data-aos="fade-down">
 			<div class="comm container">
-				<h3>Commitment to Quality and Service</h3>
+				<h2>Commitment to Quality and Service</h2>
 				<p>
 					We are a team of passionate, hardworking individuals committed to customer satisfaction. Our goal is to offer the most cost-effective solutions and competitively-priced, locally manufactured filter products that are at par with international quality standards.
 				</p>

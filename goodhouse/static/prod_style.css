@@ -31,42 +31,6 @@ body {
 .header-items {
 	margin-top: 6%;
 }
-.careers-box{
-	padding-left:30px;
-	padding-right:30px;
-	padding-bottom: 50px;
-
-}
-.jumbotron{
-	padding:20px;
-	background-color: transparent;
-}
-.jumbotron h1{
-	color:rgb(230,180,90);
-	font-family:"Fira Sans";
-}
-.jumbotron p{
-	color:white;
-	font-family: Helvetica;
-}
-.careers-content{
-	padding:30px;
-	
-	background-color: black;
-	text-align: justify;
-	border-radius:15px;
-	border-style: solid;
-	border-color:rgb(20,20,20);
-
-}
-.careers-content h3{
-	color:rgb(230,180,90);
-}
-.careers-content p{
-	color:white;
-	padding-bottom:20px;
-	font-size: 1.2em;
-}
 .footer{
 	background-color:black;
 	color:white ;

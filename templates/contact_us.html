@@ -92,13 +92,32 @@
 			<div class="contact">
 				<h1>Contact Us</h1>
 				<p>
+					Tel. Nos: (632) 838-95-21 to 24
+				</p>
+				<p>
+					Fax No:  (632) 838-95-25
+				</p>
+				<p>
+					Company Email: ghii@ghii.com.ph
+				</p>
+				<img src="{% static 'map.png'%}">
+				<p>
+					Please send your sales inquiries to fd@ghii.com.ph or envirotech@ghii.com.ph 
+				<p>
+				<p>
 					Call us at (02) 838 9521 to 24 to talk to a technical sales representative, type your contact information and
 					product inquiries below, or send it to ghii@ghii.com.ph.  
-				<p>
+
+
+				</p>
 				<form action="/send/" method="post" enctype="multipart/form-data">{% csrf_token %}
 					<hr>
-					<h4>Contact (Enter details here)</h4>
-					<textarea class="contact-field" name="contact" ></textarea>
+					<h4>Name</h4>
+					<textarea class="contact-field" name="name" ></textarea>
+					<h4>Email</h4>
+					<textarea class="contact-field" name="email" ></textarea>
+					<h4>Contact No</h4>
+					<textarea class="contact-field" name="number" ></textarea>
 					<h4>Message</h4>
 					<textarea class="message-field" name="content"></textarea>
 					<br>
