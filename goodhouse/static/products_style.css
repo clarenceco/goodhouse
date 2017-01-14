@@ -7,15 +7,18 @@ body {
 }
 .navbar{
 	background-color: black;
+	min-height:120px;
 }
 .navbar-brand img {
-	height:55px;
-	width:520px;
+	height:300%;
+	width:50%;
+	min-width:350px;
 }
-.icon-bar {
-   background-color:white;
-   margin-top:75%;
+.navbar-toggle {
+	font-family:"Fira Sans";
+	color:rgb(230,180,90);
 }
+
 .header-icons {
 	color:rgb(240,240,240);
 	font-size: 1.2em;
@@ -28,7 +31,7 @@ body {
 	color:white;
 }
 .header-items {
-	margin-top: 6%;
+	margin-top:15px;
 }
 .jumbotron{
 	padding:20px;
@@ -151,4 +154,5 @@ hr{
 	padding: 1rem;
 	position: fixed;
 	text-align:center;
+	z-index: 100;
 }
