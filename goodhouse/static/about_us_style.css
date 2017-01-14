@@ -4,22 +4,25 @@ body {
 }
 .navbar{
 	background-color: black;
-	min-height:120px;
 }
 .navbar-brand img {
-	height:300%;
-	width:50%;
-	min-width:350px;
+	height:55px;
+	width:480px;
 }
 .navbar-toggle {
 	font-family:"Fira Sans";
 	color:rgb(230,180,90);
+	padding-left:20px;
+	padding-right:20px;
+	border-style:double;
+	border-color:rgb(25,25,25);
+	border-radius:10px;
 }
-
 .header-icons {
 	color:rgb(240,240,240);
 	font-size: 1.2em;
 }
+
 .header-icons:hover {
 	color: rgb(230,180,90);
 }
@@ -28,25 +31,38 @@ body {
 	color:white;
 }
 .header-items {
-	margin-top:15px;
+	margin-top: 6%;
 }
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+	.navbar{
+		background-color: black;
+		min-height:120px;
+	}
+	.navbar-brand img {
+		height:50px;
+		width:360px;
 
+	}
+	.navbar-toggle {
+		font-family:"Fira Sans";
+		color:rgb(230,180,90);
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	.header-icons {
+		color:rgb(240,240,240);
+		font-size: 1.2em;
+	}
+	.header-icons:hover {
+		color: rgb(230,180,90);
+	}
+	#current{
+		background-color:rgb(230,180,90);
+		color:white;
+	}
+	.header-items {
+		margin-top:15px;
+	}
+}
 .jumbotron{
 	padding:20px;
 	background-color: transparent;
@@ -94,17 +110,19 @@ body {
 	color:white;
 	float:left;
 	clear:none;
-	font-size:1.1em;
+	font-size:1.3em;
 
 }
+
+
 .first{
 	width: 18.5%;
-	margin-left:1.8%;
 	margin-top:2%;
 	text-align:center;
 
 	float: left;
 	clear:none;
+
 }
 .sub-class{
 	width: 18.5%;
@@ -113,20 +131,59 @@ body {
 
 	float: left;
 	clear:none;
+
 }
 .last{
 	width: 18.5%;
+	margin-right:5%;
 	margin-top:2%;
 	text-align:center;
 
 	float: left;
 	clear:none;
+
 }
 .first img, .last img, .sub-class img{
 	display: block;
 	margin:0 auto;
 	width:50px;
 	max-height:50px;
+}
+
+@media only screen and (max-width: 990px), only screen and (max-device-width: 990px) {
+
+
+	.desc li{
+		color:white;
+		float:left;
+		clear:none;
+		font-size:0.8em;
+
+	}
+
+
+
+	
+}
+
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+
+
+	.desc li{
+
+		font-size:0.5em;
+
+	}
+
+
+	.first img, .last img, .sub-class img{
+
+	width:40px;
+	max-height:40px;
+	}	
+
+
+	
 }
 .serv{
 	background-color:black;

@@ -7,22 +7,25 @@ body {
 }
 .navbar{
 	background-color: black;
-	min-height:120px;
 }
 .navbar-brand img {
-	height:300%;
-	width:50%;
-	min-width:350px;
+	height:55px;
+	width:480px;
 }
 .navbar-toggle {
 	font-family:"Fira Sans";
 	color:rgb(230,180,90);
+	padding-left:20px;
+	padding-right:20px;
+	border-style:double;
+	border-color:rgb(25,25,25);
+	border-radius:10px;
 }
-
 .header-icons {
 	color:rgb(240,240,240);
 	font-size: 1.2em;
 }
+
 .header-icons:hover {
 	color: rgb(230,180,90);
 }
@@ -31,7 +34,68 @@ body {
 	color:white;
 }
 .header-items {
-	margin-top:15px;
+	margin-top: 6%;
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+	.navbar{
+		background-color: black;
+		min-height:120px;
+	}
+	.navbar-brand img {
+		height:50px;
+		width:360px;
+
+	}
+	.navbar-toggle {
+		font-family:"Fira Sans";
+		color:rgb(230,180,90);
+	}
+
+	.header-icons {
+		color:rgb(240,240,240);
+		font-size: 1.2em;
+	}
+	.header-icons:hover {
+		color: rgb(230,180,90);
+	}
+	#current{
+		background-color:rgb(230,180,90);
+		color:white;
+	}
+	.header-items {
+		margin-top:15px;
+	}
+}
+@media only screen and (max-width: 480px), only screen and (max-device-width: 480px) {
+	.navbar{
+		background-color: black;
+		min-height:120px;
+	}
+	.navbar-brand img {
+		height:50px;
+		width:360px;
+
+	}
+	.navbar-toggle {
+		font-family:"Fira Sans";
+		color:rgb(230,180,90);
+	}
+
+	.header-icons {
+		color:rgb(240,240,240);
+		font-size: 1.2em;
+	}
+	.header-icons:hover {
+		color: rgb(230,180,90);
+	}
+	#current{
+		background-color:rgb(230,180,90);
+		color:white;
+	}
+	.header-items {
+		margin-top:15px;
+	}
+
 }
 .jumbotron{
 	padding:20px;
@@ -101,9 +165,9 @@ body {
 .product-icons:hover{
 	color:rgb(230,180,90);
 	text-decoration: none;
-	background-color:white;
+	background-color:rgb(25,25,25);
 	padding:5px;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 .footer{
 	background-color:black;
