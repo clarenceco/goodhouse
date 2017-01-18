@@ -48,9 +48,11 @@ def Send(request):
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
 		if form.is_valid():
-			contact = form.cleaned_data['contact']
+			name = form.cleaned_data['name']
+			email = form.cleaned_data['email']
+			number = form.cleaned_data['number']
 			content = form.cleaned_data['content']
-			fullemail = "Contact: " + contact + ". Content:" + content
+			fullemail = "Name: " + name + ".\nEmail:" + email + ".\nNumber: " + number + ". \nContent: " + content
 			try:
 				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['goodhousetestacc@gmail.com'], fail_silently=False)
 				return render(request, 'contact_us.html', context)
