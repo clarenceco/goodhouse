@@ -59,7 +59,7 @@ def Send(request):
 			except:
 				return render(request, 'about_us.html', context)
 		else:
-			return render(request, 'about_us.html', context)
+			return render(request, 'archive.html', context)
 	else:
-		return render(request, 'about_us.html', context)
+		return render(request, 'careers.html', context)
 
