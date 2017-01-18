@@ -41,5 +41,7 @@ class Career(models.Model):
 		return self.title
 
 class ContactForm(forms.Form):
-    contact = forms.CharField(required=True)
+    name = forms.CharField(required=True)
+    email = forms.CharField(required=True)
+    number = forms.CharField(required=True)
     content = forms.CharField(required=True)
