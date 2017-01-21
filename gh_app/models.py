@@ -55,4 +55,4 @@ class ContactForm(forms.Form):
     content = forms.CharField(required=True)
 
 class SearchBox(forms.Form):
-	string = forms.CharField(required=True)
+	search = forms.CharField(required=True)
