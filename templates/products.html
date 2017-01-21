@@ -103,7 +103,7 @@
 				<ul class="product-drop">
 					{% for filter in filters %}
 					<li class="dropdown">
-						<a class = "product-icons" href=/opentab/{{filter.name}} data-toggle="dropdown">
+						<a class = "product-icons" href=/opentab/{{filter.name}} target="_blank" data-toggle="dropdown">
 							{{ filter.name }}
 						</a>
           			</li>
@@ -122,7 +122,7 @@
 				<ul class="product-drop">
 					{% for ec in equipment_consumables %}
 					<li class="dropdown">
-						<a class = "product-icons"href="#" data-toggle="dropdown">
+						<a class = "product-icons" href=/opentab/{{ec.name}} target="_blank" data-toggle="dropdown">
 							{{ ec.name }}
 						</a>
           				</li>
