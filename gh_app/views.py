@@ -53,7 +53,7 @@ def Search(request):
 	equipment_consumables = AirWater_EquipmentConsumable.objects.all()
 	if request.method == 'POST':
 		search = SearchBox(request.POST)
-		if form.is_valid():
+		if search.is_valid():
 			objlist = []
 			search_string = search.cleaned_data['search']
 			for x in filters:
