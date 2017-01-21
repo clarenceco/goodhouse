@@ -64,9 +64,9 @@ def Search(request):
 					objlist.append(y)
 			return render(request, 'search.html', {'objlist' : objlist, 'len' : len(objlist)})
 		else:
-			return render(request, 'about_us.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
+			return render(request, 'products.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
 
-	return render(request, 'careers.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
+	return render(request, 'products.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
 	
 def Careers(request):
 	careers = Career.objects.order_by("title")
