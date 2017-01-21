@@ -11,5 +11,5 @@ urlpatterns = [
 	url(r'^careers/', Careers, name = 'Careers'),
 	url(r'^contactus/', ContactUs, name = 'ContactUs'),
 	url(r'^send/', Send, name = 'Send'),
-	url(r'^opentab/(?P<filter_name>[\w\-]+)/$', OpenTab, name = 'OpenTab'),
+	url(r'^opentab/(?P<filter_name>[\w\ ]+)/$', OpenTab, name = 'OpenTab'),
 ]
