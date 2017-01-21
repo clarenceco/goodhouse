@@ -46,6 +46,7 @@ def OpenTab(request, filter_name):
 		if str(y.name) == str(filter_name):
 			objlist.append(y)
 			return render(request,'prod.html',{'objlist': objlist})
+	return render(request,'prod.html',{'objlist': objlist})
 	
 def Careers(request):
 	careers = Career.objects.order_by("title")
