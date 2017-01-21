@@ -103,15 +103,10 @@
 				<ul class="product-drop">
 					{% for filter in filters %}
 					<li class="dropdown">
-						<a class = "product-icons"href="#" data-toggle="dropdown">
+						<a class = "product-icons" href="/opentab/{{filter.name}}" data-toggle="dropdown">
 							{{ filter.name }}
 						</a>
-          				<div class="dropdown-menu">
-          					{% cloudinary filter.file format="jpg" width=300 height=275 %}
-          					<p>{{ filter.description|linebreaksbr }}</p>
-           				
-           				</div>
-					</li>
+          			</li>
 					{% endfor %}
 				</ul>
 
@@ -130,11 +125,7 @@
 						<a class = "product-icons"href="#" data-toggle="dropdown">
 							{{ ec.name }}
 						</a>
-          				<div class="dropdown-menu">
-          					{% cloudinary ec.file format="jpg" width=300 height=275 %}
-          					<p>{{ ec.description|linebreaksbr }}</p>
-           				</div>
-					</li>
+          				</li>
 					{% endfor %}
 				</ul>
 				<br>

@@ -82,15 +82,15 @@ WSGI_APPLICATION = 'goodhouse.wsgi.application'
 #os.environ['DATABASE_URL']
 DATABASES = {
     'default' : dj_database_url.config(default='postgres://iaycddqpnqaffs:ac17462a2d6e8a9468225511eca89e70fbf0f3bd0efc41ec759a1c52611ab732@ec2-54-163-234-140.compute-1.amazonaws.com:5432/dttrl07ejo0i2')
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
-    #     #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    #     'NAME': 'ghdb',
-    #     'PORT': '5432',
-    #     'HOST': '127.0.0.1',
-    #     'USER': 'goodhouse',
-    #     'PASSWORD': 'raffy',
-    # }
+     # 'default': {
+     #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+     #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     #     'NAME': 'ghdb',
+     #     'PORT': '5432',
+     #     'HOST': '127.0.0.1',
+     #     'USER': 'goodhouse',
+     #     'PASSWORD': 'raffy',
+     # }
 }
 
 # Password validation

@@ -34,6 +34,19 @@ def Products(request):
 	equipment_consumables = AirWater_EquipmentConsumable.objects.all()
 	return render(request, 'products.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
 
+def OpenTab(request, filter_name):
+	filters = AirWater_Filter.objects.all()
+	equipment_consumables = AirWater_EquipmentConsumable.objects.all()
+	objlist = []
+	for x in filters:
+		if str(x.name) == str(filter_name):
+			objlist.append(x)
+			return render(request,'prod.html',{'objlist': objlist})
+	for y in filters:
+		if str(y.name) == str(filter_name):
+			objlist.append(y)
+			return render(request,'prod.html',{'objlist': objlist})
+	
 def Careers(request):
 	careers = Career.objects.order_by("title")
 	return render(request, 'careers.html', {"careers" : careers})
@@ -52,14 +65,14 @@ def Send(request):
 			email = form.cleaned_data['email']
 			number = form.cleaned_data['number']
 			content = form.cleaned_data['content']
-			fullemail = "Name: " + name + ".\nEmail:" + email + ".\nNumber: " + number + ". \nContent: " + content
+			fullemail = "Name: " + name + "\nEmail:" + email + "\nNumber: " + number + "\n\nContent: " + content
 			try:
 				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['goodhousetestacc@gmail.com'], fail_silently=False)
 				return render(request, 'contact_us.html', context)
 			except:
-				return render(request, 'about_us.html', context)
+				return render(request, 'contact_us.html', context)
 		else:
-			return render(request, 'archive.html', context)
+			return render(request, 'contact_us.html', context)
 	else:
-		return render(request, 'careers.html', context)
+		return render(request, 'contact_us.html', context)
 
