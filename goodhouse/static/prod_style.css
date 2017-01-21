@@ -66,6 +66,30 @@ body {
 		margin-top:15px;
 	}
 }
+.prod-item{
+	margin:0 auto;
+	text-align:center;
+	background:black;
+	border-radius:15px;
+	border-style:solid;
+	border-color:rgb(20,20,20);
+}
+.prod-item h1{
+	color:rgb(230,180,90);
+	font:"Fira Sans";
+}
+.prod-item p{
+	color:white;
+	font:helvetica;
+	font-size:1.2em;
+	margin-bottom:25px;
+}
+.prod-item img{
+	max-height:50%;
+	max-width:70%;
+	border-radius:25px;
+	padding:20px;
+}
 .footer{
 	background-color:black;
 	color:white ;
