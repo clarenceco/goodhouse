@@ -8,7 +8,7 @@ from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
 
 
-from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable, Career, ContactForm
+from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable, Career, ContactForm, SearchBox
 
 # Create your views here.
 
@@ -42,11 +42,31 @@ def OpenTab(request, filter_name):
 		if str(x.name) == str(filter_name):
 			objlist.append(x)
 			return render(request,'prod.html',{'objlist': objlist})
-	for y in filters:
+	for y in equipment_consumables:
 		if str(y.name) == str(filter_name):
 			objlist.append(y)
 			return render(request,'prod.html',{'objlist': objlist})
 	return render(request,'prod.html',{'objlist': objlist})
+
+def Search(request):
+	filters = AirWater_Filter.objects.all()
+	equipment_consumables = AirWater_EquipmentConsumable.objects.all()
+	if request.method == 'POST':
+		search = SearchBox(request.POST)
+		if form.is_valid():
+			objlist = []
+			search_string = search.cleaned_data['search']
+			for x in filters:
+				if str(x.name) == str(search_string):
+					objlist.append(x)
+			for y in equipment_consumables:
+				if str(y.name) == str(search_string):
+					objlist.append(y)
+			return render(request, 'search.html', {'objlist' : objlist, 'len' : len(objlist)})
+		else:
+			return render(request, 'products.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
+
+	return render(request, 'products.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
 	
 def Careers(request):
 	careers = Career.objects.order_by("title")

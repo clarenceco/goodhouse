@@ -53,3 +53,6 @@ class ContactForm(forms.Form):
     email = forms.CharField(required=True)
     number = forms.CharField(required=True)
     content = forms.CharField(required=True)
+
+class SearchBox(forms.Form):
+	string = forms.CharField(required=True)

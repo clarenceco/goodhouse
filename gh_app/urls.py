@@ -12,4 +12,5 @@ urlpatterns = [
 	url(r'^contactus/', ContactUs, name = 'ContactUs'),
 	url(r'^send/', Send, name = 'Send'),
 	url(r'^opentab/(?P<filter_name>[\w|\W]+)/$', OpenTab, name = 'OpenTab'),
+	url(r'^search/(?P<search_string>[\w|\W]+)/$', Search, name = 'Search'),
 ]
