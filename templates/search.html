@@ -88,12 +88,16 @@
 		<div class="search container">
 
 		<h1>Search Results</h1>
-
+		{% if len == 0 %}
+			No results found.
+		{% else %}
 		<ul>
-			<a href="#"><li>Product 1</li></a>
-			<a href="#"><li>Product 2</li></a>
-			<a href="#"><li>Product 3</li></a>
+			{% for item in objlist %}
+			<a href="/prod/{{item.name}}"><li>{{item.name}}</li></a>
+			{% endfor %}
+
 		</ul>
+		{% endif %}
 
 
 		</div>
