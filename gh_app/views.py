@@ -45,10 +45,11 @@ def OpenTab(request, filter_name):
 	for x in filters:
 		if str(x.name) == str(filter_name):
 			objlist.append(x)
+			return render(request,'prod.html',{'item': objlist[0]}
 	for y in equipment_consumables:
 		if str(y.name) == str(filter_name):
 			objlist.append(y)
-	return render(request,'prod.html',{'objlist': objlist})
+			return render(request,'prod.html',{'item': objlist[0]}
 
 def Search(request):
 	filters = AirWater_Filter.objects.all()
