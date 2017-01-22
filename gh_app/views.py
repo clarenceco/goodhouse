@@ -31,7 +31,7 @@ def AboutUs(request):
 	prod2 = firstfour[1]
 	prod3 = firstfour[2]
 	prod4 = firstfour[3]
-	return render(request, 'about_us.html', {"firstfour" : firstfour})
+	return render(request, 'about_us.html', {"prod1" : prod1, "prod2" : prod2, "prod3" : prod3, "prod4" : prod4})
 
 def Products(request):
 	filters = AirWater_Filter.objects.all()
