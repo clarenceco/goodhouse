@@ -8,7 +8,7 @@ from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
 
 
-from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable, Career, ContactForm, SearchBox
+from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable, Featured_Product, Career, ContactForm, SearchBox
 
 # Create your views here.
 
@@ -18,7 +18,6 @@ def New(request):
 	post2 = firstfour[1]
 	post3 = firstfour[2]
 	post4 = firstfour[3]
-	rest = Post.objects.order_by("-upload_date")[4:]
 	return render(request, 'new.html', {"post1" : post1,"post2" : post2,"post3" : post3,"post4" : post4})
 
 def Archive(request):
@@ -27,7 +26,12 @@ def Archive(request):
 
 def AboutUs(request):
 	context = {}
-	return render(request, 'about_us.html', context)
+	firstfour = Featured_Product.order_by("-upload_date")[:4]
+	prod1 = firstfour[0]
+	prod2 = firstfour[1]
+	prod3 = firstfour[2]
+	prod4 = firstfour[3]
+	return render(request, 'about_us.html', {"firstfour" : firstfour})
 
 def Products(request):
 	filters = AirWater_Filter.objects.all()
