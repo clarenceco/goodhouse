@@ -66,6 +66,10 @@ body {
 		margin-top:15px;
 	}
 }
+
+.prod-box{
+	padding-bottom:70px;
+}
 .prod-item{
 	margin:0 auto;
 	text-align:center;
@@ -73,6 +77,7 @@ body {
 	border-radius:15px;
 	border-style:solid;
 	border-color:rgb(20,20,20);
+	padding:30px;
 }
 .prod-item h1{
 	color:rgb(230,180,90);
@@ -89,6 +94,11 @@ body {
 	max-width:70%;
 	border-radius:25px;
 	padding:20px;
+}
+#download-bro{
+	text-decoration: none;
+	color:rgb(230,180,90);
+	font:"Fira Sans";
 }
 .footer{
 	background-color:black;

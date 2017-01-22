@@ -256,7 +256,7 @@ body {
 	border-style: solid;
 	border-color:rgb(20,20,20);
 }
-.carousel-content h3{
+.carousel-content a{
 	color:rgb(230,180,90);
 	font-family:"Fira Sans";
 	text-align:center;

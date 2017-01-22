@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">		
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-		<link href="{% static 'prod_style.css' %}" type="text/css" rel="stylesheet">
+		<link href="{% static 'search_style.css' %}" type="text/css" rel="stylesheet">
 
 		<link rel="shortcut icon" type="image/png" href="{% static 'gh.png' %}"/>
 	
@@ -64,12 +64,12 @@
 
 
 			        	<li class = "header-items">
-			            	<a class = "header-icons" href="/products">Products</a>
+			            	<a id="current" class = "header-icons" href="/products">Products</a>
 			        	</li>
 
 
 			        	<li class = "header-items">
-			            	<a id="current" class = "header-icons" href="/careers">Careers</a>
+			            	<a class = "header-icons" href="/careers">Careers</a>
 			        	</li>
 
 
@@ -85,7 +85,15 @@
 	  		</div>
 		</nav>
 
-		<div class="container">
+		<div class="search container">
+
+		<h1>Search Results</h1>
+
+		<ul>
+			<a href="#"><li>Product 1</li></a>
+			<a href="#"><li>Product 2</li></a>
+			<a href="#"><li>Product 3</li></a>
+		</ul>
 
 
 		</div>

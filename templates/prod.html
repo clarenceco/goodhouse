@@ -87,18 +87,21 @@
 		</nav>
 
 		{% for item in objlist %}
-		<div class="prod-item container">
-			<h1>{{item.name}}</h1>
-			{% cloudinary item.file format="jpg" %}
-			<p>{{item.description}}<p>
+		<div class="prod-box">
+			<div class="prod-item container">
+				<h1>{{item.name}}</h1>
+				{% cloudinary item.file format="jpg" %}
+				<p>{{item.description}}</p>
+				<p>For more product information: <span><a id="download-bro"href="{% static 'Filter Catalog.docx'%}">Download Our Product Catalog</a></span></p>
 
+			</div>
 		</div>
 		{% endfor %}
 
-		<div class="container">
 
 
-		</div>
+
+
 		<!--Animations-->
 		<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 		<script>
