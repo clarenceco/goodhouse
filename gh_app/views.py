@@ -60,10 +60,10 @@ def Search(request):
 			objlist = []
 			search_string = search.cleaned_data['search']
 			for x in filters:
-				if str(search_string) in str(x.name):
+				if str(search_string.lower()) in str(x.name.lower()):
 					objlist.append(x)
 			for y in equipment_consumables:
-				if str(search_string) in str(y.name):
+				if str(search_string.lower()) in str(y.name.lower()):
 					objlist.append(y)
 			return render(request, 'search.html', {'objlist' : objlist, 'len' : len(objlist)})
 		else:
