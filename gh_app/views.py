@@ -26,7 +26,7 @@ def Archive(request):
 
 def AboutUs(request):
 	context = {}
-	firstfour = Featured_Product.order_by("-upload_date")[:4]
+	firstfour = Featured_Product.objects.order_by("-upload_date")[:4]
 	prod1 = firstfour[0]
 	prod2 = firstfour[1]
 	prod3 = firstfour[2]
