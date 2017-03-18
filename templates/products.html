@@ -133,6 +133,24 @@
 			</div>
 		</div>
 
+		<div class="product-box3">
+			<div class="product-content">
+				<h2>Air ahahahahahahahahansumables</h2>
+				<hr>
+
+				<ul class="product-drop">
+					{% for ec in equipment_consumables %}
+					<li class="dropdown">
+						<a class = "product-icons" href="/prod/{{ec.name}}" target="_blank">
+							{{ ec.name }}
+						</a>
+          				</li>
+					{% endfor %}
+				</ul>
+				<br>
+			</div>
+		</div>
+
 		<div class="serv-box">
 			<div class="serv container">
 				<h2>Our Services</h2>
