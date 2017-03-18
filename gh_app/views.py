@@ -102,7 +102,7 @@ def Send(request):
 			content = form.cleaned_data['content']
 			fullemail = "Name: " + name + "\nEmail:" + email + "\nNumber: " + number + "\n\nContent: " + content
 			try:
-				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['goodhousetestacc@gmail.com'], fail_silently=False)
+				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['clarenceco1001@gmail.com'], fail_silently=False)
 				return render(request, 'contact_us.html', context)
 			except:
 				return render(request, 'contact_us.html', context)
