@@ -53,7 +53,7 @@ def OpenTab(request, filter_name):
 		if str(y.name) == str(filter_name):
 			objlist.append(y)
 			return render(request,'prod.html',{'item': objlist[0]})
-	for z in air:
+	for z in dust:
 		if str(z.name) == str(filter_name):
 			objlist.append(z)
 			return render(request,'prod.html',{'item': objlist[0]})
