@@ -155,9 +155,9 @@
 			<div class="serv container">
 				<h2>Our Services</h2>
 				<p>We offer cleanroom validation and air quality measurement tests at a reasonable cost.</p> 
-
-					<a href="/service/{{filter.name}}" target="_blank"><p class="serv-item">Particle Count</p></a>
-
+					{% for service in services %}
+					<a href="/service/{{service.name}}" target="_blank"><p class="serv-item">{{service.name}}</p></a>
+					{% endfor %}
 
 				
 			</div>
