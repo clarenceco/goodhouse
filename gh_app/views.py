@@ -8,7 +8,7 @@ from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
 
 
-from .models import Post, Air_Filter, Water_Filter, Dust_Filter, Featured_Product, Career, ContactForm, SearchBox
+from .models import Post, Air_Filter, Water_Filter, Dust_Filter, Featured_Product, Career, ContactForm, SearchBox, Service
 
 # Create your views here.
 
@@ -37,8 +37,8 @@ def Products(request):
 	air = Air_Filter.objects.all()
 	water = Water_Filter.objects.all()
 	dust = Dust_Filter.objects.all()
-
-	return render(request, 'products.html', {"air_filters" : air, "water_filters" : water, "dust_filters" : dust})
+	services = Service.objects.all()
+	return render(request, 'products.html', {"air_filters" : air, "water_filters" : water, "dust_filters" : dust, "services" : services})
 
 def OpenTab(request, filter_name):
 	air = Air_Filter.objects.all()
@@ -57,6 +57,13 @@ def OpenTab(request, filter_name):
 		if str(z.name) == str(filter_name):
 			objlist.append(z)
 			return render(request,'prod.html',{'item': objlist[0]})
+def OpenService(request, service_name):
+	services = Service.objects.all()
+	objlist = []
+	for x in services:
+		if str(x.name) == str(service_name):
+			objlist.append(x)
+			return render(request,'service.html', {"service" : objlist[0]})
 
 def Search(request):
 	air = Air_Filter.objects.all()
@@ -102,7 +109,7 @@ def Send(request):
 			content = form.cleaned_data['content']
 			fullemail = "Name: " + name + "\nEmail:" + email + "\nNumber: " + number + "\n\nContent: " + content
 			try:
-				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['clarenceco1001@gmail.com'], fail_silently=False)
+				send_mail("Website Message", fullemail, settings.EMAIL_HOST_USER, ['ghii@ghii.com.ph '], fail_silently=False)
 				return render(request, 'contact_us.html', context)
 			except:
 				return render(request, 'contact_us.html', context)

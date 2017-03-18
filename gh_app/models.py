@@ -41,6 +41,14 @@ class Dust_Filter(models.Model):
 	def __str__(self):
 		return self.name
 
+class Service(models.Model):
+	name = models.CharField(max_length = 100, primary_key = True)
+	description = models.TextField()
+	file = CloudinaryField('image')
+	upload_date = models.DateTimeField(auto_now_add = True)
+	def __str__(self):
+		return self.name
+
 class Career(models.Model):
 	title = models.CharField(max_length = 100, primary_key = True)
 	description = models.TextField()
