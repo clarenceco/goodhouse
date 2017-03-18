@@ -98,11 +98,11 @@
 
 		<div class="product-box1">
 			<div class="product-content">
-				<h2>Dust Filters</h2>
+				<h2>Air Filters</h2>
 				<hr>
 
 				<ul class="product-drop">
-					{% for filter in dust_filters %}
+					{% for filter in air_filters %}
 					<li class="dropdown">
 						<a class = "product-icons" href="/prod/{{filter.name}}" target="_blank">
 							{{ filter.name }}
@@ -117,11 +117,11 @@
 
 		<div class="product-box2">
 			<div class="product-content">
-				<h2>Water Filters</h2>
+				<h2>Dust Filters</h2>
 				<hr>
 
 				<ul class="product-drop">
-					{% for filter in water_filters %}
+					{% for filter in dust_filters %}
 					<li class="dropdown">
 						<a class = "product-icons" href="/prod/{{filter.name}}" target="_blank">
 							{{ filter.name }}
@@ -135,11 +135,11 @@
 
 		<div class="product-box3">
 			<div class="product-content">
-				<h2>Air Filters</h2>
+				<h2>Wet Filters</h2>
 				<hr>
 
 				<ul class="product-drop">
-					{% for filter in air_filters %}
+					{% for filter in water_filters %}
 					<li class="dropdown">
 						<a class = "product-icons" href="/prod/{{filter.name}}" target="_blank">
 							{{ filter.name }}
