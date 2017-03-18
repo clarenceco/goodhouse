@@ -1,10 +1,11 @@
 from __future__ import unicode_literals 
 from django.contrib import admin
-from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable, Featured_Product, Career
+from .models import Post, Air_Filter, Water_Filter, Dust_Filter, Featured_Product, Career
 
 admin.site.register(Post)
 admin.site.register(Career)
-admin.site.register(AirWater_Filter)
-admin.site.register(AirWater_EquipmentConsumable)
+admin.site.register(Air_Filter)
+admin.site.register(Water_Filter)
+admin.site.register(Dust_Filter)
 admin.site.register(Featured_Product)
 # Register your models here.

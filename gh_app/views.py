@@ -8,7 +8,7 @@ from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
 
 
-from .models import Post, AirWater_Filter, AirWater_EquipmentConsumable, Featured_Product, Career, ContactForm, SearchBox
+from .models import Post, Air_Filter, Water_Filter, Dust_Filter, Featured_Product, Career, ContactForm, SearchBox
 
 # Create your views here.
 
@@ -34,43 +34,54 @@ def AboutUs(request):
 	return render(request, 'about_us.html', {"prod1" : prod1, "prod2" : prod2, "prod3" : prod3, "prod4" : prod4})
 
 def Products(request):
-	filters = AirWater_Filter.objects.all()
-	equipment_consumables = AirWater_EquipmentConsumable.objects.all()
-	return render(request, 'products.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
+	air = Air_Filter.objects.all()
+	water = Water_Filter.objects.all()
+	dust = Dust_Filter.objects.all()
+
+	return render(request, 'products.html', {"air_filters" : air, "water_filters" : water, "dust_filters" : dust})
 
 def OpenTab(request, filter_name):
-	filters = AirWater_Filter.objects.all()
-	equipment_consumables = AirWater_EquipmentConsumable.objects.all()
+	air = Air_Filter.objects.all()
+	water = Water_Filter.objects.all()
+	dust = Dust_Filter.objects.all()
 	objlist = []
-	for x in filters:
+	for x in air:
 		if str(x.name) == str(filter_name):
 			objlist.append(x)
 			return render(request,'prod.html',{'item': objlist[0]})
-	for y in equipment_consumables:
+	for y in water:
 		if str(y.name) == str(filter_name):
 			objlist.append(y)
 			return render(request,'prod.html',{'item': objlist[0]})
+	for z in air:
+		if str(z.name) == str(filter_name):
+			objlist.append(z)
+			return render(request,'prod.html',{'item': objlist[0]})
 
 def Search(request):
-	filters = AirWater_Filter.objects.all()
-	equipment_consumables = AirWater_EquipmentConsumable.objects.all()
+	air = Air_Filter.objects.all()
+	water = Water_Filter.objects.all()
+	dust = Dust_Filter.objects.all()
 	if request.method == 'POST':
 		search = SearchBox(request.POST)
 		if search.is_valid():
 			objlist = []
 			search_string = search.cleaned_data['search']
-			for x in filters:
+			for x in air:
 				if str(search_string.lower()) in str(x.name.lower()):
 					objlist.append(x)
-			for y in equipment_consumables:
+			for y in water:
 				if str(search_string.lower()) in str(y.name.lower()):
 					objlist.append(y)
+			for z in dust:
+				if str(search_string.lower()) in str(z.name.lower()):
+					objlist.append(z)
 			return render(request, 'search.html', {'objlist' : objlist, 'len' : len(objlist)})
 		else:
-			return render(request, 'products.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
+			return render(request, 'products.html', {"air_filters" : air, "water_filters" : water, "dust_filters" : dust})
 
-	return render(request, 'products.html', {"filters" : filters, "equipment_consumables" : equipment_consumables})
-	
+	return render(request, 'products.html', {"air_filters" : air, "water_filters" : water, "dust_filters" : dust})
+
 def Careers(request):
 	careers = Career.objects.order_by("title")
 	return render(request, 'careers.html', {"careers" : careers})

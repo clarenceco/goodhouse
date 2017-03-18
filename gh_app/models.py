@@ -17,7 +17,7 @@ class Post(models.Model):
 	def __unicode__(self):
 		return self.title
 
-class AirWater_Filter(models.Model):
+class Air_Filter(models.Model):
 	name = models.CharField(max_length = 100, primary_key = True)
 	description = models.TextField()
 	file = CloudinaryField('image')
@@ -25,7 +25,15 @@ class AirWater_Filter(models.Model):
 	def __str__(self):
 		return self.name
 
-class AirWater_EquipmentConsumable(models.Model):
+class Water_Filter(models.Model):
+	name = models.CharField(max_length = 100, primary_key = True)
+	description = models.TextField()
+	file = CloudinaryField('image')
+	upload_date = models.DateTimeField(auto_now_add = True)
+	def __str__(self):
+		return self.name
+
+class Dust_Filter(models.Model):
 	name = models.CharField(max_length = 100, primary_key = True)
 	description = models.TextField()
 	file = CloudinaryField('image')

@@ -98,11 +98,11 @@
 
 		<div class="product-box1">
 			<div class="product-content">
-				<h2>Air and Water Filters</h2>
+				<h2>Dust Filters</h2>
 				<hr>
 
 				<ul class="product-drop">
-					{% for filter in filters %}
+					{% for filter in dust_filters %}
 					<li class="dropdown">
 						<a class = "product-icons" href="/prod/{{filter.name}}" target="_blank">
 							{{ filter.name }}
@@ -117,14 +117,14 @@
 
 		<div class="product-box2">
 			<div class="product-content">
-				<h2>Air and Water Equipment and Consumables</h2>
+				<h2>Water Filters</h2>
 				<hr>
 
 				<ul class="product-drop">
-					{% for ec in equipment_consumables %}
+					{% for filter in water_filters %}
 					<li class="dropdown">
-						<a class = "product-icons" href="/prod/{{ec.name}}" target="_blank">
-							{{ ec.name }}
+						<a class = "product-icons" href="/prod/{{filter.name}}" target="_blank">
+							{{ filter.name }}
 						</a>
           				</li>
 					{% endfor %}
@@ -135,14 +135,14 @@
 
 		<div class="product-box3">
 			<div class="product-content">
-				<h2>Air ahahahahahahahahansumables</h2>
+				<h2>Air Filters</h2>
 				<hr>
 
 				<ul class="product-drop">
-					{% for ec in equipment_consumables %}
+					{% for filter in air_filters %}
 					<li class="dropdown">
-						<a class = "product-icons" href="/prod/{{ec.name}}" target="_blank">
-							{{ ec.name }}
+						<a class = "product-icons" href="/prod/{{filter.name}}" target="_blank">
+							{{ filter.name }}
 						</a>
           				</li>
 					{% endfor %}
