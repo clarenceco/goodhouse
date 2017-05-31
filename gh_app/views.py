@@ -57,6 +57,8 @@ def OpenTab(request, filter_name):
 		if str(z.name) == str(filter_name):
 			objlist.append(z)
 			return render(request,'prod.html',{'item': objlist[0]})
+	return render(request,'prod.html',{'item': objlist[0]})
+
 def OpenService(request, service_name):
 	services = Service.objects.all()
 	objlist = []
