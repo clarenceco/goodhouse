@@ -78,4 +78,4 @@ class ProductCatalog(models.Model):
 	file = models.FileField(upload_to='static')
 
 	def filename(self):
-		return os.path.basename(self.file.name)
+		return os.path.abspath(self.file.name)
