@@ -75,7 +75,7 @@ class SearchBox(forms.Form):
 	search = forms.CharField(required=True)
 
 class ProductCatalog(models.Model):
-	file = models.FileField(upload_to='static')
+	file = models.FileField()
 
 	def filename(self):
 		return os.path.abspath(self.file.name)
