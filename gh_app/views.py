@@ -8,7 +8,7 @@ from django.conf import settings
 from django.core.mail import send_mail, BadHeaderError
 
 
-from .models import Post, Air_Filter, Water_Filter, Dust_Filter, Featured_Product, Career, ContactForm, SearchBox, Service
+from .models import Post, Air_Filter, Water_Filter, Dust_Filter, Featured_Product, Career, ContactForm, SearchBox, Service, ProductCatalog
 
 # Create your views here.
 
@@ -61,11 +61,12 @@ def OpenTab(request, filter_name):
 
 def OpenService(request, service_name):
 	services = Service.objects.all()
+	productcatalog = ProductCatalog.objects.latest()
 	objlist = []
 	for x in services:
 		if str(x.name) == str(service_name):
 			objlist.append(x)
-			return render(request,'service.html', {"service" : objlist[0]})
+			return render(request,'service.html', {"service" : objlist[0], "productcatalog" : productcatalog})
 
 def Search(request):
 	air = Air_Filter.objects.all()
