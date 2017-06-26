@@ -92,8 +92,7 @@
 				{% cloudinary service.file format="jpg" %}
 				<p>{{service.description|linebreaks}}</p>
 
-				<a href="/download/" target="_blank">download this</a>
-				<p>{{catalog.file.url}}</p>
+				<a href="{{ catalog.file.url" target="_blank" dowload>download this</a>
 
 				<p>For more product information: <span><a id="download-bro"href="{% static 'Filter Catalog.docx' %}">Download Our Product Catalog</a></span></p>
 
