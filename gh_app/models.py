@@ -4,6 +4,7 @@ from django import forms
 from cloudinary.models import CloudinaryField
 from django.utils import timezone
 import datetime
+import os
 
 
 class Post(models.Model):
