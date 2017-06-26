@@ -62,11 +62,13 @@ def OpenTab(request, filter_name):
 
 def OpenService(request, service_name):
 	services = Service.objects.all()
+	catalogs = ProductCatalog.objects.all()
+	catalog = catalogs[0]
 	objlist = []
 	for x in services:
 		if str(x.name) == str(service_name):
 			objlist.append(x)
-			return render(request,'service.html', {"service" : objlist[0]})
+			return render(request,'service.html', {"service" : objlist[0], "catalog" : catalog})
 
 def Search(request):
 	air = Air_Filter.objects.all()
