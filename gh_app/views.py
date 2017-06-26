@@ -61,7 +61,7 @@ def OpenTab(request, filter_name):
 
 def OpenService(request, service_name):
 	services = Service.objects.all()
-	productcatalog = ProductCatalog.objects.latest()
+	productcatalog = ProductCatalog.objects.latest('file')
 	objlist = []
 	for x in services:
 		if str(x.name) == str(service_name):
