@@ -61,12 +61,11 @@ def OpenTab(request, filter_name):
 
 def OpenService(request, service_name):
 	services = Service.objects.all()
-	productcatalog = ProductCatalog.objects.latest('file')
 	objlist = []
 	for x in services:
 		if str(x.name) == str(service_name):
 			objlist.append(x)
-			return render(request,'service.html', {"service" : objlist[0], "productcatalog" : productcatalog})
+			return render(request,'service.html', {"service" : objlist[0]})
 
 def Search(request):
 	air = Air_Filter.objects.all()
@@ -121,3 +120,11 @@ def Send(request):
 	else:
 		return render(request, 'contact_us.html', context)
 
+def Download(request):
+	catalogs = ProductCatalog.objects.all()
+	catalog = catalogs[0]
+	filename = catalog.file.name.split('/')[-1]
+	response = HttpResponse(catalog.file, content_type='text/plain')
+	response['Content-Disposition'] = 'attachment; filename=%s' % filename
+
+	return response

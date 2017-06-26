@@ -14,4 +14,7 @@ urlpatterns = [
 	url(r'^prod/(?P<filter_name>[\w|\W]+)/$', OpenTab, name = 'OpenTab'),
 	url(r'^service/(?P<service_name>[\w|\W]+)/$', OpenService, name = 'OpenService'),
 	url(r'^search/', Search, name = 'Search'),
+	url(r'^download/', Download, name = 'Download'),
 ]
+
+
