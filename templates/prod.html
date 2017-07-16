@@ -91,7 +91,7 @@
 				<h1>{{item.name}}</h1>
 				{% cloudinary item.file format="jpg" %}
 				<p>{{item.description|linebreaks}}</p>
-				<p>For more product information: <span><a id="download-bro"href="{% static 'Filter Catalog.docx'%}">Download Our Product Catalog</a></span></p>
+				<p>For more product information: <span><a href="{{catalog.file.url}}" download target ="_blank">Download Our Product Catalog</a></span></p>
 
 			</div>
 		</div>

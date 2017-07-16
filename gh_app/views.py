@@ -51,15 +51,15 @@ def OpenTab(request, filter_name):
 	for x in air:
 		if str(x.name) == str(filter_name):
 			objlist.append(x)
-			return render(request,'prod.html',{'item': objlist[0]})
+			return render(request,'prod.html',{'item': objlist[0], 'catalog': catalog})
 	for y in water:
 		if str(y.name) == str(filter_name):
 			objlist.append(y)
-			return render(request,'prod.html',{'item': objlist[0]})
+			return render(request,'prod.html',{'item': objlist[0], 'catalog': catalog})
 	for z in dust:
 		if str(z.name) == str(filter_name):
 			objlist.append(z)
-			return render(request,'prod.html',{'item': objlist[0]})
+			return render(request,'prod.html',{'item': objlist[0], 'catalog': catalog})
 	return render(request,'prod.html',{'item': objlist[0], 'catalog': catalog})
 
 def OpenService(request, service_name):
