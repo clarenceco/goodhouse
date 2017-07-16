@@ -45,6 +45,8 @@ def OpenTab(request, filter_name):
 	air = Air_Filter.objects.all()
 	water = Water_Filter.objects.all()
 	dust = Dust_Filter.objects.all()
+	catalogs = ProductCatalog.objects.all()
+	catalog = catalogs[0]
 	objlist = []
 	for x in air:
 		if str(x.name) == str(filter_name):
@@ -58,7 +60,7 @@ def OpenTab(request, filter_name):
 		if str(z.name) == str(filter_name):
 			objlist.append(z)
 			return render(request,'prod.html',{'item': objlist[0]})
-	return render(request,'prod.html',{'item': objlist[0]})
+	return render(request,'prod.html',{'item': objlist[0], 'catalog': catalog})
 
 def OpenService(request, service_name):
 	services = Service.objects.all()
@@ -122,12 +124,3 @@ def Send(request):
 			return render(request, 'contact_us.html', context)
 	else:
 		return render(request, 'contact_us.html', context)
-
-def Download(request):
-	catalogs = ProductCatalog.objects.all()
-	catalog = catalogs[0]
-	filename = catalog.file.name.split('/')[-1]
-	response = HttpResponse(catalog.file, content_type='text/plain')
-	response['Content-Disposition'] = 'attachment; filename=%s' % filename
-
-	return response

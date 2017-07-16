@@ -75,7 +75,4 @@ class SearchBox(forms.Form):
 	search = forms.CharField(required=True)
 
 class ProductCatalog(models.Model):
-	file = models.FileField(upload_to='catalogs/%Y/%m/%d')
-
-	def filename(self):
-		return os.path.abspath(self.file.name)
+	file = models.FileField(upload_to='documents/', blank=True, null=True)

@@ -91,11 +91,9 @@
 				<h1>{{service.name}}</h1>
 				{% cloudinary service.file format="jpg" %}
 				<p>{{service.description|linebreaks}}</p>
-
-				<a href="{{ catalog.file.url }}" target="_blank" dowload>download this</a>
-
-				<p>For more product information: <span><a id="download-bro"href="{% static 'Filter Catalog.docx' %}">Download Our Product Catalog</a></span></p>
-
+				<!-- <a href="{{ catalog.file.url }}" target="_blank" dowload>download this</a> -->
+				<p>For more product information: <span><a href="{{catalog.file.url}}" download target ="_blank">Download Our Product Catalog</a></span></p>
+				<!-- <p>For more product information: <span><a id="download-bro"href="{% static 'Filter Catalog.docx' %}">Download Our Product Catalog</a></span></p> -->
 			</div>
 		</div>
 
